@@ -9,10 +9,11 @@ Project description: A good description is clear, short, and to the point. Descr
 
 ## (Table of Contents/Outlines)
 to allow other people to quickly navigate especially long or detailed READMEs.
+- [Access Method](#access-method)
 - [Action Items](#action-items)
 - [Topology](#topology)
-- [Prerequisites](#prerequisites)
-
+- [Minimum Requirements](#minimum-requirements)
+- [Repository Structure](#repository-structure)
 - [Steps](#steps)
     - [Clone the repository](#clone-the-repository)
     - [Install dependencies](#install-dependencies)
@@ -22,7 +23,7 @@ to allow other people to quickly navigate especially long or detailed READMEs.
 - [Troubleshooting](#troubleshooting)
 - [FAQ](#faq)
 
-## Access method (if any)
+## Access Method (if any)
 IP Address : 192.168.8.42
 User: 
 
@@ -64,6 +65,9 @@ User:
 | GCC Version     | 7.5 or higher                |
 | Python Version  | 3.6 or higher                |
 | Kubernetes      | 1.18 or higher               |
+
+### Repository Structure
+ - </folder>: <description> 
 
 ### Configuration
 Explain how to configure the applcation and the possible options.
