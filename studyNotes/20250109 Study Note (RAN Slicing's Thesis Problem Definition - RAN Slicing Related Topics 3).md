@@ -12,7 +12,7 @@
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 2](https://hackmd.io/@superwilfrid/Hyfd3U0NJe)
 
 **Table of Contents:**
-[toc]
+[[_TOC_]]
 
 ## 1. Research Proposal 1 (LLM to Enable Intent-Based Network Management Automation for On-Demand RAN Slice Admission Control)
 
@@ -134,8 +134,6 @@ H --> C
 References:
 1. [Intent-Based Management of Next-Generation Networks: an LLM-Centric Approach](https://ieeexplore.ieee.org/document/10574890)
 
-:::warning
-
 | Scenario         | Goal        | Figures                                             | Expected Result                                                     |
 | ---------------- | ----------- | --------------------------------------------------- | ------------------------------------------------------------------- |
 | ~~Scenario 1~~   | ~~Problem~~ | ![image](https://hackmd.io/_uploads/SkpikSXwJg.png) | ~~If system is like this, On-Demand Network Management is tedious~~ |
@@ -143,9 +141,6 @@ References:
 | ~~Scenario 2-2~~ | ~~Novelty~~ | ![image](https://hackmd.io/_uploads/SJU0_0mDyl.png) | ~~Network Management Automation~~                                   |
 | Scenario 2-2     | Novelty     | ![image](https://hackmd.io/_uploads/B1Aui0mDyl.png) | Admission Control can guarantee throughput of Priority Slice        |
 | Scenario 3       | Price Paid  |                                                     | Show LLM resource usage?                                                                    |
-
-
-:::
 
 <!--
 ```c=
