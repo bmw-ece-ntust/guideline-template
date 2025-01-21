@@ -65,10 +65,10 @@ References:
 - Admission Control Loop Flow diagram:
 ```mermaid
 sequenceDiagram
-	participant "nrUE" as ue
-	participant "gNB" as gnb
-	participant "Near-RT RIC" as ric
-	participant "core" as cn
+	participant ue as "nrUE"
+	participant gnb as "gNB"
+	participant ric as "Near-RT RIC"
+	participant cn as "core"
 
 	ue-->gnb:Msg1
 	gnb-->ue:Msg2
