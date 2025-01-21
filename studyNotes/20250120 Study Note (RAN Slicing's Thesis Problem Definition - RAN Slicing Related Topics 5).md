@@ -76,26 +76,26 @@ F(List of RAN<br>Config Files) --> C
 
 ### 2.1. RANSliceSubnetProfile to Config File Mapping
 
-| RANSliceSubnetProfile | OAI gNB Config | Viavi RIC Test Config | Expected Result |
-| --------------------- | -------------- | --------------------- | --------------- |
-| coverageTAList        | tracking_area_code               |                       |                 |
-| ueMobilityLevel       |                |                       |                 |
-| resourceSharingLevel  |                |                       |                 |
-| maxNumberOfUes        |                |                       |                 |
-| resourceSharingLevel  |                |                       |                 |
-| activityFactor        |                |                       |                 |
-| dLThptPerSliceSubnet  |                |                       |                 |
-| dLThptPerUE           |                |                       |                 |
-| uESpeed               |                |                       |                 |
-| reliability           |                |                       |                 |
-| nROperatingBands      |                |                       |                 |
-| dLLatency             |                |                       |                 |
-| delayTolerance        |                |                       |                 |
-| sliceSimultaneousUse  |                |                       |                 |
-| dLMaxPktSize          |                |                       |                 |
-| energyEfficiency      |                |                       |                 |
-| termDensity           |                |                       |                 |
-| survivalTime          |                |                       |                 |
-| dLDeterministicComm   |                |                       |                 |
-| positioning           |                |                       |                 |
-| synchronicity         |                |                       |                 |
+| RANSliceSubnetProfile | OAI gNB Config                       | Viavi RIC Test Config | Expected Result |
+| --------------------- | ------------------------------------ | --------------------- | --------------- |
+| coverageTAList        | tracking_area_code                   |                       |                 |
+| ueMobilityLevel       |                                      |                       |                 |
+| resourceSharingLevel  |                                      |                       |                 |
+| maxNumberOfUes        |                                      |                       |                 |
+| resourceSharingLevel  |                                      |                       |                 |
+| activityFactor        |                                      |                       |                 |
+| dLThptPerSliceSubnet  |                                      |                       |                 |
+| dLThptPerUE           |                                      |                       |                 |
+| uESpeed               |                                      |                       |                 |
+| reliability           |                                      |                       |                 |
+| nROperatingBands      | dl_frequencyBand\nul_frequencyBand |                       |                 |
+| dLLatency             |                                      |                       |                 |
+| delayTolerance        |                                      |                       |                 |
+| sliceSimultaneousUse  |                                      |                       |                 |
+| dLMaxPktSize          |                                      |                       |                 |
+| energyEfficiency      |                                      |                       |                 |
+| termDensity           |                                      |                       |                 |
+| survivalTime          |                                      |                       |                 |
+| dLDeterministicComm   |                                      |                       |                 |
+| positioning           |                                      |                       |                 |
+| synchronicity         |                                      |                       |                 |
