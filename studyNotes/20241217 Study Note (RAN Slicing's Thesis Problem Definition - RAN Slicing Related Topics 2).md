@@ -15,8 +15,17 @@
 - [Wilfrid | Handover Process in 5G NR](https://hackmd.io/@superwilfrid/S1b57bT4kx)
 
 **Table of Contents:**
+- [2024/12/17 Study Note (RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 2)](#2024-12-17-study-note--ran-slicing-s-thesis-problem-definition---ran-slicing-related-topics-2-)
+          + [tags: `2024`](#tags---2024-)
+  * [1. Research Proposal 1 (NSSI Resource Allocation Optimization)](#1-research-proposal-1--nssi-resource-allocation-optimization-)
+    + [1.1. Research Proposal](#11-research-proposal)
+    + [1.2. System Model/Architecture](#12-system-model-architecture)
+    + [1.3. Scenarios for Experiments](#13-scenarios-for-experiments)
+  * [2. Research Proposal 2 (Development of Slice Aware Handover)](#2-research-proposal-2--development-of-slice-aware-handover-)
+    + [2.1. Research Proposal](#21-research-proposal)
+    + [2.2. System Model/Architecture](#22-system-model-architecture)
 
-[[_TOC_]]
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 1. Research Proposal 1 (NSSI Resource Allocation Optimization)
 

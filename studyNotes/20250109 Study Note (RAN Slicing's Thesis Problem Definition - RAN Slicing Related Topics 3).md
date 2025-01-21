@@ -12,8 +12,14 @@
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 2](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20241217%20Study%20Note%20(RAN%20Slicing's%20Thesis%20Problem%20Definition%20-%20RAN%20Slicing%20Related%20Topics%202).md)
 
 **Table of Contents:**
+- [2025/01/09 Study Note (RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 3)](#2025-01-09-study-note--ran-slicing-s-thesis-problem-definition---ran-slicing-related-topics-3-)
+          + [tags: `2025`](#tags---2025-)
+  * [1. Research Proposal 1 (LLM to Enable Intent-Based Network Management Automation for On-Demand RAN Slice Admission Control)](#1-research-proposal-1--llm-to-enable-intent-based-network-management-automation-for-on-demand-ran-slice-admission-control-)
+    + [1.1. Research Proposal](#11-research-proposal)
+    + [1.2. System Model/Architecture](#12-system-model-architecture)
+    + [1.3. Scenarios for Experiments](#13-scenarios-for-experiments)
 
-[[_TOC_]]
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 1. Research Proposal 1 (LLM to Enable Intent-Based Network Management Automation for On-Demand RAN Slice Admission Control)
 

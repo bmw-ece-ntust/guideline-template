@@ -13,8 +13,22 @@
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 3](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20250109%20Study%20Note%20(RAN%20Slicing's%20Thesis%20Problem%20Definition%20-%20RAN%20Slicing%20Related%20Topics%203).md)
 
 **Table of Contents:**
+- [2025/01/17 Study Note (RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 4)](#2025-01-17-study-note--ran-slicing-s-thesis-problem-definition---ran-slicing-related-topics-4-)
+          + [tags: `2025`](#tags---2025-)
+  * [1. Research Proposal 1 (LLM to Enable Vendor Specific Configuration File and RAN Slice SLA Parameter Generation for On-Demand RAN Slice Creation and Admission Control)](#1-research-proposal-1--llm-to-enable-vendor-specific-configuration-file-and-ran-slice-sla-parameter-generation-for-on-demand-ran-slice-creation-and-admission-control-)
+    + [1.1. Research Proposal](#11-research-proposal)
+    + [1.2. System Model/Architecture](#12-system-model-architecture)
+    + [1.3. Scenarios for Experiments](#13-scenarios-for-experiments)
+  * [2. Appendix](#2-appendix)
+    + [2.1. General Example of Network Slicing Management Functions](#21-general-example-of-network-slicing-management-functions)
+    + [2.2. Lifecycle Phases of an NSI](#22-lifecycle-phases-of-an-nsi)
+    + [2.3. Schematic overview of the generic framework of a Network Slice/Subnet design process](#23-schematic-overview-of-the-generic-framework-of-a-network-slice-subnet-design-process)
+    + [2.4. Redraw](#24-redraw)
+    + [2.9. Extras](#29-extras)
+      - [2.9.1.](#291)
+      - [2.9.2. RANSliceSubnetProfile](#292-ranslicesubnetprofile)
 
-[[_TOC_]]
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 1. Research Proposal 1 (LLM to Enable Vendor Specific Configuration File and RAN Slice SLA Parameter Generation for On-Demand RAN Slice Creation and Admission Control)
 
