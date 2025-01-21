@@ -63,30 +63,31 @@ References:
 ![image](https://hackmd.io/_uploads/SJ7si9Dw1e.png)
 
 - Admission Control Loop Flow diagram:
-```plantuml
-participant "nrUE" as ue
-participant "gNB" as gnb
-participant "Near-RT RIC" as ric
-participant "core" as cn
+```mermaid
+sequenceDiagram
+	participant "nrUE" as ue
+	participant "gNB" as gnb
+	participant "Near-RT RIC" as ric
+	participant "core" as cn
 
-ue-->gnb:Msg1
-gnb-->ue:Msg2
-ue-->gnb:Msg3
-gnb-->ue:Msg4
-ue-->gnb:RRCSetupComplete
-gnb-->cn:Registration Request
-note over cn:...
-note over ue:...
-cn-->ue:Registration Accept
-ue-->cn:PDU Session Establishment Request (with S-NSSAI)
-note over cn:...
-cn-->gnb:PDU Session Resource Setup\nRequest (with S-NSSAI)
-note over gnb:...
-gnb-->ric:**UE Admission Control**\n**Request (with S-NSSAI)**
-note over ric:**RAN Slice Admission Control**
-ric-->gnb:**UE Admission Control**
-note over gnb:...
-gnb-->cn:PDU Session Resource Setup Response
+	ue-->gnb:Msg1
+	gnb-->ue:Msg2
+	ue-->gnb:Msg3
+	gnb-->ue:Msg4
+	ue-->gnb:RRCSetupComplete
+	gnb-->cn:Registration Request
+	note over cn:...
+	note over ue:...
+	cn-->ue:Registration Accept
+	ue-->cn:PDU Session Establishment Request (with S-NSSAI)
+	note over cn:...
+	cn-->gnb:PDU Session Resource Setup\nRequest (with S-NSSAI)
+	note over gnb:...
+	gnb-->ric:**UE Admission Control**\n**Request (with S-NSSAI)**
+	note over ric:**RAN Slice Admission Control**
+	ric-->gnb:**UE Admission Control**
+	note over gnb:...
+	gnb-->cn:PDU Session Resource Setup Response
 ```
 
 - RANSliceSubnetProfile Translator Architecture

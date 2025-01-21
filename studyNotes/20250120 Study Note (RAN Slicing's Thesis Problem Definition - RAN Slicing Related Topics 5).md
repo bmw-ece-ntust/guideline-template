@@ -11,7 +11,7 @@
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics](https://hackmd.io/@superwilfrid/SJD6D_ajR)
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 2](https://hackmd.io/@superwilfrid/Hyfd3U0NJe)
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 3](https://hackmd.io/@superwilfrid/rko5_shI1l)
-- [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 4](https://hackmd.io/@superwilfrid/SJjJj7DDye)
+- [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 4](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20250117%20Study%20Note%20(RAN%20Slicing's%20Thesis%20Problem%20Definition%20-%20RAN%20Slicing%20Related%20Topics%204).md)
 
 **Table of Contents:**
 [toc]
