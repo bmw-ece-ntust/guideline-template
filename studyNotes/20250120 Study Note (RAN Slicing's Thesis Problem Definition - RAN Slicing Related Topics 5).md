@@ -78,7 +78,7 @@ F(List of RAN<br>Config Files) --> C
 
 | RANSliceSubnetProfile | OAI gNB Config | Viavi RIC Test Config | Expected Result |
 | --------------------- | -------------- | --------------------- | --------------- |
-| coverageTAList        |                |                       |                 |
+| coverageTAList        | tracking_area_code               |                       |                 |
 | ueMobilityLevel       |                |                       |                 |
 | resourceSharingLevel  |                |                       |                 |
 | maxNumberOfUes        |                |                       |                 |
