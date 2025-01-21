@@ -73,3 +73,29 @@ F(List of RAN<br>Config Files) --> C
 | Scenario 3 | Price Paid |         |                 |
 
 ## 2. Appendix
+
+### 2.1. RANSliceSubnetProfile to Config File Mapping
+
+| RANSliceSubnetProfile | OAI gNB Config | Viavi RIC Test Config | Expected Result |
+| --------------------- | -------------- | --------------------- | --------------- |
+| coverageTAList        |                |                       |                 |
+| ueMobilityLevel       |                |                       |                 |
+| resourceSharingLevel  |                |                       |                 |
+| maxNumberOfUes        |                |                       |                 |
+| resourceSharingLevel  |                |                       |                 |
+| activityFactor        |                |                       |                 |
+| dLThptPerSliceSubnet  |                |                       |                 |
+| dLThptPerUE           |                |                       |                 |
+| uESpeed               |                |                       |                 |
+| reliability           |                |                       |                 |
+| nROperatingBands      |                |                       |                 |
+| dLLatency             |                |                       |                 |
+| delayTolerance        |                |                       |                 |
+| sliceSimultaneousUse  |                |                       |                 |
+| dLMaxPktSize          |                |                       |                 |
+| energyEfficiency      |                |                       |                 |
+| termDensity           |                |                       |                 |
+| survivalTime          |                |                       |                 |
+| dLDeterministicComm   |                |                       |                 |
+| positioning           |                |                       |                 |
+| synchronicity         |                |                       |                 |
