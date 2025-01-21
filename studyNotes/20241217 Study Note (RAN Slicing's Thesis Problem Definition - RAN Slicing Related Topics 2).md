@@ -12,7 +12,7 @@
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240829%20Study%20Note%20(RAN%20Slicing's%20Thesis%20Problem%20Definition%20-%20RAN%20Slicing%20Related%20Topics).md)
 - [O-RAN.WG1.Use-Cases-Detailed-Specification](https://www.o-ran.org/specifications)
 - [Network Slice Traffic Demand Prediction for Slice Mobility Management](https://ieeexplore.ieee.org/document/10463320)
-- [Wilfrid | Handover Process in 5G NR](https://hackmd.io/@superwilfrid/S1b57bT4kx)
+- [Wilfrid | Handover Process in 5G NR](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20241216%20Study%20Note%20(Handover%20Process%20in%205G%20NR).md)
 
 **Table of Contents:**
 - [2024/12/17 Study Note (RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 2)](#2024-12-17-study-note--ran-slicing-s-thesis-problem-definition---ran-slicing-related-topics-2-)
