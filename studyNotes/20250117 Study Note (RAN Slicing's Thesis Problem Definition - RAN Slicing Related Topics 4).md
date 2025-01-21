@@ -13,6 +13,7 @@
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 3](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20250109%20Study%20Note%20(RAN%20Slicing's%20Thesis%20Problem%20Definition%20-%20RAN%20Slicing%20Related%20Topics%203).md)
 
 **Table of Contents:**
+
 [[_TOC_]]
 
 ## 1. Research Proposal 1 (LLM to Enable Vendor Specific Configuration File and RAN Slice SLA Parameter Generation for On-Demand RAN Slice Creation and Admission Control)

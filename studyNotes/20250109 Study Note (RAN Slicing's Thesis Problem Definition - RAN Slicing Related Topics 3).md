@@ -12,6 +12,7 @@
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 2](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20241217%20Study%20Note%20(RAN%20Slicing's%20Thesis%20Problem%20Definition%20-%20RAN%20Slicing%20Related%20Topics%202).md)
 
 **Table of Contents:**
+
 [[_TOC_]]
 
 ## 1. Research Proposal 1 (LLM to Enable Intent-Based Network Management Automation for On-Demand RAN Slice Admission Control)
