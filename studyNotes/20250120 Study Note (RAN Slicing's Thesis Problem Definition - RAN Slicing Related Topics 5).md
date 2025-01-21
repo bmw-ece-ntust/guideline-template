@@ -1,123 +1,82 @@
-<h1 align="center">Installation Guideline - Project Name</h1>
-<hr>
+# 2025/01/20 Study Note (RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 5)
 
-###### tags: `programA` `guideline` 
+###### tags: `2025`
 
-## Project description
-Project description: A good description is clear, short, and to the point. Describe the importance of your project, and what it does.
+:::info
+**Goal:**
+- [ ] Write research proposal for [LLM to Enable Vendor Specific Configuration File and RAN Slice SLA Parameter Generation for On-Demand RAN Slice Creation and Admission Control](#1-Research-Proposal-1-LLM-to-Enable-Vendor-Specific-Configuration-File-and-RAN-Slice-SLA-Parameter-Generation-for-On-Demand-RAN-Slice-Creation-and-Admission-Control)
+:::
 
+:::success 
+**References:**
+- [Prof. Ray | Template for BMW Lab.](https://hackmd.io/@RayCheng/rJIuoWmB8)
+- [Wilfrid's Thesis Problem Definition - RAN Slicing Architecture](https://hackmd.io/@superwilfrid/BJaSZiYjA)
+- [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics](https://hackmd.io/@superwilfrid/SJD6D_ajR)
+- [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 2](https://hackmd.io/@superwilfrid/Hyfd3U0NJe)
+- [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 3](https://hackmd.io/@superwilfrid/rko5_shI1l)
+- [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 4](https://hackmd.io/@superwilfrid/SJjJj7DDye)
+:::
 
-## (Table of Contents/Outlines)
-to allow other people to quickly navigate especially long or detailed READMEs.
-- [Access Method](#access-method)
-- [Action Items](#action-items)
-- [Topology](#topology)
-- [Minimum Requirements](#minimum-requirements)
-- [Repository Structure](#repository-structure)
-- [Steps](#steps)
-    - [Clone the repository](#clone-the-repository)
-    - [Install dependencies](#install-dependencies)
-    - [Set up environment variables](#set-up-environment-variables)
-    - [Run the application](#run-the-application)
-
-- [Troubleshooting](#troubleshooting)
-- [FAQ](#faq)
-
-## Access Method (if any)
-IP Address : 192.168.8.42
-User: 
-
-## Action Items
-
-| Step                      | Command/Action                                      | Description                                      |
-|---------------------------|-----------------------------------------------------|--------------------------------------------------|
-| Clone the repository      | `git clone https://github.com/your-username/your-repo.git` | Clone the project repository to your local machine |
-| Install dependencies      | `npm install`                                       | Install all necessary dependencies               |
-| Set up environment variables | Create a `.env` file and refer to `.env.example` | Configure environment variables                  |
-| Run the application       | `npm start`                                         | Start the application                            |
-| Open in browser           | Navigate to `http://localhost:3000`                 | Open the application in your web browser         |
+:::warning
+**Table of Contents:**
+[toc]
+:::
 
 
-## Topology
+## 1. Research Proposal 1 (LLM to Enable Vendor Specific Configuration File and RAN Slice SLA Parameter Generation for On-Demand RAN Slice Creation and Admission Control)
+
+### 1.1. Research Proposal
+
+References:
+[1] [Comprehensive Tutorial on the Organization of a Standards-Aligned Network Slice/Subnet Design Process and Opportunities for Its Automation](https://ieeexplore.ieee.org/abstract/document/10375939)
+[2] [A Survey on Large Language Models for Network Operations & Management: Applications, Techniques, and Opportunities](https://arxiv.org/html/2412.19823v1)
+[3] [Digital Twins for 5G Networks: A Modeling and Deployment Methodology](https://ieeexplore.ieee.org/document/10103508)
+[4] O-RAN.WG1.Use-Cases-Detailed-Specification
+
+:::info
+- **Contribution:**
+    - D
+- **Background:**
+    - S
+- **Intended Outcome:**
+    - T
+- **Application Design:**
+    - R
+- **Findings:**
+    - For future study
+- **Challenge:**
+    - N
+:::
+
+
+### 1.2. System Model/Architecture
+References:
+[1] [Juniper RAN Intelligent Controller - Admission Control Use Case](https://www.youtube.com/watch?v=HD3kDIp0VZI)
+[2] Yueh Huan's Thesis Oral Exam PPT
+[3] [Multimodal RAG Assistant with NVIDIA NeMo](https://github.com/NVIDIA/GenerativeAIExamples/tree/main/community/multimodal_assistant)
+
+:::success
+- System architecture:
+
+- RAN Config File Selector Architecture
+```mermaid
+graph LR
+B --> D(Best RAN<br/>Config File<br>for SliceProfile)
+C(Vector DB) -- Augmented<br/> Prompt--> B((BACKEND<br/>NVIDIA AI Playground<br/>Mixtral 8x7B))
+E(User Query =<br>RANSliceSubnetProfile) --Retrieval--> C
+F(List of RAN<br>Config Files) --> C
 ```
+:::
+
+### 1.3. Scenarios for Experiments
+
+:::warning
+| Scenario   | Goal       | Figures | Expected Result |
+| ---------- | ---------- | ------- | --------------- |
+| Scenario 1 | Problem    |         |                 |
+| Scenario 2 | Novelty    |         |                 |
+| Scenario 3 | Price Paid |         |                 |
+:::
 
 
-          +--------+
-          |  Server|
-          +--------+
-             / | \
-            /  |  \
-           /   |   \
-          /    |    \
-+--------+  +--------+  +--------+
-| Client1|  | Client2|  | Client3|
-+--------+  +--------+  +--------+
-```
-
-
-## Minimum Requirements
-
-| Component       | Requirement                  |
-|-----------------|------------------------------|
-| Operating System| Ubuntu 22.04 or higher       |
-| CPU             | 2 GHz dual-core processor    |
-| Memory          | 4 GB RAM                     |
-| GCC Version     | 7.5 or higher                |
-| Python Version  | 3.6 or higher                |
-| Kubernetes      | 1.18 or higher               |
-
-### Repository Structure
- - </folder>: <description> 
-
-### Configuration
-Explain how to configure the applcation and the possible options.
-
-
-### Installation Steps
-Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
-
-1. **Clone the repository:**
-
-    ```sh
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
-    ```
-
-2. **Install dependencies:**
-    ```sh
-    pip install -r requirements.txt 
-    ```
-
-3. **Set up environment variables:**
-
-    Create a `.env` file in the root directory and add the necessary environment variables. Refer to `.env.example` for guidance.
-
-4. **Run the application:**
-
-    ```sh
-    python3 app.py
-    ```
-
-##  Post-Installation Verification
-Outline how to verify that the installation was successful.
-1. **Step 1:**
-
-Expected Result:
-
-2. **Step 2:**
-
-
-Expected Result:
-
-## Troubleshooting
-Provide common issues and their solutions.
-1. **Issue 1:** (Describe the issue.)
-   
-   Solution: (Provide the solution.)
-
-## Additional Resources
-List of additional documentation, links, or resources that may be helpful.
-
-**Documentation:** (Link to official documentation or user manuals.)
-
-**Support**: (Contact information for support or a link to a support forum.)
+## 2. Appendix
