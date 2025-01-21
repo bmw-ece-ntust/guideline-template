@@ -67,10 +67,10 @@ References:
 | RRU.PrbUsedUl<br>(.SNSSAI)          | O-DU | :x:                | :x:                     | :x:                     | :heavy_check_mark: |
 | DRB.UEThp.Dl<br>(.SNSSAI)           | O-DU | :x:                | :heavy_check_mark: (E2) | :heavy_check_mark: (E2) | :heavy_check_mark: |
 | DRB.UEThp.Ul<br>(.SNSSAI)           | O-DU | :x:                | :heavy_check_mark: (E2) | :heavy_check_mark: (E2) | :heavy_check_mark: |
-| SM.PDUSessionSetupReq<br>(.SNSSAI)  | O-CU | NA                 | :x:                     | :x:                     | :x:                |
-| SM.PDUSessionSetupSucc<br>(.SNSSAI) | O-CU | NA                 | :x:                     | :x:                     | :x:                |
-| DRB.UEThp.DlDist.Bin<br>(.SNSSAI)   | O-DU | :x:                | :x:                     | :x:                     | :x:                |
-| DRB.UEThp.UlDist.Bin<br>(.SNSSAI)   | O-DU | :x:                | :x:                     | :x:                     | :x:                |
+| SM.PDUSessionSetupReq<br>(.SNSSAI)  | O-CU | NA                 | :x:                     | :x:                     | :heavy_check_mark: |
+| SM.PDUSessionSetupSucc<br>(.SNSSAI) | O-CU | NA                 | :x:                     | :x:                     | :heavy_check_mark: |
+| DRB.UEThp.DlDist.Bin<br>(.SNSSAI)   | O-DU | :x:                | :x:                     | :x:                     | :heavy_check_mark: |
+| DRB.UEThp.UlDist.Bin<br>(.SNSSAI)   | O-DU | :x:                | :x:                     | :x:                     | :heavy_check_mark: |
 | DRB.EstabSucc<br>(.SNSSAI)          | O-CU | NA                 | :x:                     | :x:                     | :x:                |
 | RRMPolicyRatio                      | O-DU | :heavy_check_mark: | :x:                     | :heavy_check_mark: (E2) | :heavy_check_mark: |
 

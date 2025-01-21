@@ -76,26 +76,30 @@ F(List of RAN<br>Config Files) --> C
 
 ### 2.1. RANSliceSubnetProfile to Config File Mapping
 
-| RANSliceSubnetProfile | OAI gNB Config                         | Viavi RIC Test Config | Expected Result |
-| --------------------- | -------------------------------------- | --------------------- | --------------- |
-| coverageTAList        | tracking_area_code                     |                       |                 |
-| ueMobilityLevel       |                                        |                       |                 |
-| resourceSharingLevel  |                                        |                       |                 |
-| maxNumberOfUes        |                                        |                       |                 |
-| resourceSharingLevel  |                                        |                       |                 |
-| activityFactor        |                                        |                       |                 |
-| dLThptPerSliceSubnet  |                                        |                       |                 |
-| dLThptPerUE           |                                        |                       |                 |
-| uESpeed               |                                        |                       |                 |
-| reliability           |                                        |                       |                 |
-| nROperatingBands      | dl_frequencyBand<br />ul_frequencyBand |                       |                 |
-| dLLatency             |                                        |                       |                 |
-| delayTolerance        |                                        |                       |                 |
-| sliceSimultaneousUse  |                                        |                       |                 |
-| dLMaxPktSize          |                                        |                       |                 |
-| energyEfficiency      |                                        |                       |                 |
-| termDensity           |                                        |                       |                 |
-| survivalTime          |                                        |                       |                 |
-| dLDeterministicComm   |                                        |                       |                 |
-| positioning           |                                        |                       |                 |
-| synchronicity         |                                        |                       |                 |
+| RANSliceSubnetProfile | OAI gNB Config                                                       | Viavi RIC Test Config                                                      | Expected Result |
+| --------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------- |
+| coverageTAList        | tracking_area_code                                                   |                                                                            |                 |
+| ueMobilityLevel       |                                                                      | 3.5.4 Mobility Model (UE)                                                  |                 |
+| resourceSharingLevel  |                                                                      | 3.6.1 Slices                                                               |                 |
+| maxNumberOfUes        |                                                                      |                                                                            |                 |
+| resourceSharingLevel  |                                                                      |                                                                            |                 |
+| activityFactor        |                                                                      | 3.5.2 Services Used (UE)                                                   |                 |
+| dLThptPerSliceSubnet  | dl_carrierBandwidth<br />dl_subcarrierSpacing<br />nrofDownlinkSlots | 3.4.2 Frequency Bands<br />3.4.5 Advanced Traffic Models<br />3.6.1 Slices |                 |
+| dLThptPerUE           | dl_carrierBandwidth<br />dl_subcarrierSpacing<br />nrofDownlinkSlots | 3.4.2 Frequency Bands<br />3.4.5 Advanced Traffic Models<br />3.6.1 Slices |                 |
+| uLThptPerSliceSubnet  | ul_carrierBandwidth<br />ul_subcarrierSpacing<br />nrofUplinkSlots   | 3.4.2 Frequency Bands<br />3.4.5 Advanced Traffic Models<br />3.6.1 Slices |                 |
+| uLThptPerUE           | ul_carrierBandwidth<br />ul_subcarrierSpacing<br />nrofUplinkSlots   | 3.4.2 Frequency Bands<br />3.4.5 Advanced Traffic Models<br />3.6.1 Slices |                 |
+| uESpeed               |                                                                      |                                                                            |                 |
+| reliability           |                                                                      |                                                                            |                 |
+| nROperatingBands      | dl_frequencyBand<br />ul_frequencyBand                               | 3.4.1 Cell Profiles                                                        |                 |
+| dLLatency             |                                                                      |                                                                            |                 |
+| uLLatency             |                                                                      |                                                                            |                 |
+| delayTolerance        |                                                                      |                                                                            |                 |
+| sliceSimultaneousUse  |                                                                      |                                                                            |                 |
+| dLMaxPktSize          |                                                                      |                                                                            |                 |
+| energyEfficiency      |                                                                      |                                                                            |                 |
+| termDensity           |                                                                      |                                                                            |                 |
+| survivalTime          |                                                                      |                                                                            |                 |
+| dLDeterministicComm   |                                                                      |                                                                            |                 |
+| uLDeterministicComm   |                                                                      |                                                                            |                 |
+| positioning           |                                                                      |                                                                            |                 |
+| synchronicity         |                                                                      |                                                                            |                 |
