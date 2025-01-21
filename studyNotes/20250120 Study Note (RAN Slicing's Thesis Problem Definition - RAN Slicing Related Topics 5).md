@@ -2,12 +2,9 @@
 
 ###### tags: `2025`
 
-:::info
 **Goal:**
 - [ ] Write research proposal for [LLM to Enable Vendor Specific Configuration File and RAN Slice SLA Parameter Generation for On-Demand RAN Slice Creation and Admission Control](#1-Research-Proposal-1-LLM-to-Enable-Vendor-Specific-Configuration-File-and-RAN-Slice-SLA-Parameter-Generation-for-On-Demand-RAN-Slice-Creation-and-Admission-Control)
-:::
 
-:::success 
 **References:**
 - [Prof. Ray | Template for BMW Lab.](https://hackmd.io/@RayCheng/rJIuoWmB8)
 - [Wilfrid's Thesis Problem Definition - RAN Slicing Architecture](https://hackmd.io/@superwilfrid/BJaSZiYjA)
@@ -15,25 +12,20 @@
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 2](https://hackmd.io/@superwilfrid/Hyfd3U0NJe)
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 3](https://hackmd.io/@superwilfrid/rko5_shI1l)
 - [RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics 4](https://hackmd.io/@superwilfrid/SJjJj7DDye)
-:::
 
-:::warning
 **Table of Contents:**
 [toc]
-:::
-
 
 ## 1. Research Proposal 1 (LLM to Enable Vendor Specific Configuration File and RAN Slice SLA Parameter Generation for On-Demand RAN Slice Creation and Admission Control)
 
 ### 1.1. Research Proposal
 
 References:
-[1] [Comprehensive Tutorial on the Organization of a Standards-Aligned Network Slice/Subnet Design Process and Opportunities for Its Automation](https://ieeexplore.ieee.org/abstract/document/10375939)
-[2] [A Survey on Large Language Models for Network Operations & Management: Applications, Techniques, and Opportunities](https://arxiv.org/html/2412.19823v1)
-[3] [Digital Twins for 5G Networks: A Modeling and Deployment Methodology](https://ieeexplore.ieee.org/document/10103508)
-[4] O-RAN.WG1.Use-Cases-Detailed-Specification
+1. [Comprehensive Tutorial on the Organization of a Standards-Aligned Network Slice/Subnet Design Process and Opportunities for Its Automation](https://ieeexplore.ieee.org/abstract/document/10375939)
+2. [A Survey on Large Language Models for Network Operations & Management: Applications, Techniques, and Opportunities](https://arxiv.org/html/2412.19823v1)
+3. [Digital Twins for 5G Networks: A Modeling and Deployment Methodology](https://ieeexplore.ieee.org/document/10103508)
+4. O-RAN.WG1.Use-Cases-Detailed-Specification
 
-:::info
 - **Contribution:**
     - D
 - **Background:**
@@ -46,16 +38,13 @@ References:
     - For future study
 - **Challenge:**
     - N
-:::
-
 
 ### 1.2. System Model/Architecture
 References:
-[1] [Juniper RAN Intelligent Controller - Admission Control Use Case](https://www.youtube.com/watch?v=HD3kDIp0VZI)
-[2] Yueh Huan's Thesis Oral Exam PPT
-[3] [Multimodal RAG Assistant with NVIDIA NeMo](https://github.com/NVIDIA/GenerativeAIExamples/tree/main/community/multimodal_assistant)
+1. [Juniper RAN Intelligent Controller - Admission Control Use Case](https://www.youtube.com/watch?v=HD3kDIp0VZI)
+2. Yueh Huan's Thesis Oral Exam PPT
+3. [Multimodal RAG Assistant with NVIDIA NeMo](https://github.com/NVIDIA/GenerativeAIExamples/tree/main/community/multimodal_assistant)
 
-:::success
 - System architecture:
 
 - RAN Config File Selector Architecture
@@ -66,17 +55,13 @@ C(Vector DB) -- Augmented<br/> Prompt--> B((BACKEND<br/>NVIDIA AI Playground<br/
 E(User Query =<br>RANSliceSubnetProfile) --Retrieval--> C
 F(List of RAN<br>Config Files) --> C
 ```
-:::
 
 ### 1.3. Scenarios for Experiments
 
-:::warning
 | Scenario   | Goal       | Figures | Expected Result |
 | ---------- | ---------- | ------- | --------------- |
 | Scenario 1 | Problem    |         |                 |
 | Scenario 2 | Novelty    |         |                 |
 | Scenario 3 | Price Paid |         |                 |
-:::
-
 
 ## 2. Appendix
