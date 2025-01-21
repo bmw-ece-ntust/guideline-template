@@ -11,7 +11,7 @@
 - [Prof. Ray | Template for BMW Lab.](https://hackmd.io/@RayCheng/rJIuoWmB8)
 - Sharing gNB components in RAN slicing: A perspective from 3GPP/NFV standards
 - Orion: RAN Slicing for a Flexible and Cost-Effective Multi-Service Mobile Network Architecture
-- [Wilfrid's Thesis Problem Definition - RAN Slicing Architecture](https://hackmd.io/@superwilfrid/BJaSZiYjA)
+- [Wilfrid's Thesis Problem Definition - RAN Slicing Architecture](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240826%20Study%20Note%20(Wilfrid's%20Thesis%20Problem%20Definition%20-%20RAN%20Slicing%20Architecture).md)
 
 **Table of Contents:**
 - [2024/08/29 Study Note (RAN Slicing's Thesis Problem Definition - RAN Slicing Related Topics)](#2024-08-29-study-note--ran-slicing-s-thesis-problem-definition---ran-slicing-related-topics-)
