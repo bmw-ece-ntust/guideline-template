@@ -23,18 +23,18 @@
   * [1.1. ORANSlice Paper](#11-oranslice-paper)
   * [1.2. OAI Software Archi Documentation](#12-oai-software-archi-documentation)
   * [2. Regular OAI MAC PF Scheduler Flow](#2-regular-oai-mac-pf-scheduler-flow)
-    + [2.1. `gNB_dlsch_ulsch_scheduler()`](#21--gnb-dlsch-ulsch-scheduler---)
-    + [2.2. `nr_schedule_ue_spec()`](#22--nr-schedule-ue-spec---)
-    + [2.3. `nr_fr1_dlsch_preprocessor()`](#23--nr-fr1-dlsch-preprocessor---)
-    + [2.4. `pf_dl()`](#24--pf-dl---)
+    + [2.1. `gNB_dlsch_ulsch_scheduler()`](#21-gnb_dlsch_ulsch_scheduler)
+    + [2.2. `nr_schedule_ue_spec()`](#22-nr_schedule_ue_spec)
+    + [2.3. `nr_fr1_dlsch_preprocessor()`](#23-nr_fr1_dlsch_preprocessor)
+    + [2.4. `pf_dl()`](#24-pf_dl)
   * [3. RRM Policy based OAI MAC PF Scheduler Flow](#3-rrm-policy-based-oai-mac-pf-scheduler-flow)
-    + [3.1. `nr_fr1_dlsch_preprocessor()`](#31--nr-fr1-dlsch-preprocessor---)
-    + [3.2. `dl_sched_unit()`](#32--dl-sched-unit---)
-    + [3.3. `pf_dl_slice()`](#33--pf-dl-slice---)
+    + [3.1. `nr_fr1_dlsch_preprocessor()`](#31-nr_fr1_dlsch_preprocessor)
+    + [3.2. `dl_sched_unit()`](#32-dl_sched_unit)
+    + [3.3. `pf_dl_slice()`](#33-pf_dl_slice)
   * [4. NVS RRM Policy based OAI MAC SCH Flow](#4-nvs-rrm-policy-based-oai-mac-sch-flow)
-    + [4.1. `nr_schedule_ue_spec()`](#41--nr-schedule-ue-spec---)
-    + [4.2. `nvs_nr_dl()`](#42--nvs-nr-dl---)
-    + [4.3. `nr_pf_dl()`](#43--nr-pf-dl---)
+    + [4.1. `nr_schedule_ue_spec()`](#41-nr_schedule_ue_spec)
+    + [4.2. `nvs_nr_dl()`](#42-nvs_nr_dl)
+    + [4.3. `nr_pf_dl()`](#43-nr_pf_dl)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -64,18 +64,16 @@ abc
 
 ### 2.1. `gNB_dlsch_ulsch_scheduler()`
 
-```flow
-st=>start: gNB_dlsch_ulsch_scheduler()
-e=>end: End
-op=>operation: ...
-op2=>operation: nr_schedule_ulsch()
-[this function schedule UL UP/DRB]
-op3=>operation: ...
-op4=>operation: nr_schedule_ue_spec()
-[this function schedule DL UP/DRB]
-op5=>operation: ...
+```mermaid
+A([gNB_dlsch_ulsch_scheduler()])
+G([End])
+B[...]
+C[nr_schedule_ulsch()<br>"this function schedule UL UP/DRB"]
+D[...]
+E[nr_schedule_ue_spec()<br>"this function schedule DL UP/DRB"]
+F[...]
 
-st->op->op2->op3->op4->op5->e
+A-->B-->C-->D-->E-->F-->G
 ```
 
 ### 2.2. `nr_schedule_ue_spec()`
