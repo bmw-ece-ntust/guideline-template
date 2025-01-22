@@ -89,7 +89,7 @@ flowchart TD
 	= nr_fr1_dlsch_preprocessor()
 	#quot;this function do PRB calculation#quot;"]
 	D[...]
-	E{"Iterate every UE not Done?'}
+	E{"Iterate every UE not Done?"}
 	F[...]
 	G{"Iterate every LC not Done?"}
 	H[...]
