@@ -164,24 +164,25 @@ flowchart TD
 
 ### 3.2. `dl_sched_unit()`
 
-```flow
-st=>start: dl_sched_unit()
-e=>end: End
-op=>operation: ...
-op2=>operation: [this part is for retransmission]
-op3=>operation: ...
-op4=>operation: [get every slice rrmPolicy]
-cond=>condition: Iterate every Slice not Done?
-op5=>operation: ...
-op6=>operation: pf_dl_slice()
-[do allocation for intra slice]
-op7=>operation: ...
+```mermaid
+flowchart TD
+	A(["dl_sched_unit()"])
+	Z([End])
+	B[...]
+	C["#quot;this part is for retransmission#quot;"]
+	D[...]
+	E["#quot;get every slice rrmPolicy#quot;"]
+	F{"Iterate every Slice not Done?"}
+	G[...]
+	H["pf_dl_slice()
+	#quot;do allocation for intra slice#quot;"]
+	I[...]
 
 
-st->op->op2->op3->op4->cond
-cond(yes)->op5
-cond(no)->e
-op5->op6->op7->cond
+	A-->B-->C-->D-->E-->F
+	F --> |yes| G
+	F ------> |no| Z
+	G-->H-->I-->F
 ```
 
 ### 3.3. `pf_dl_slice()`
