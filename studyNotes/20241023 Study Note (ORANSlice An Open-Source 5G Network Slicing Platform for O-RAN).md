@@ -156,19 +156,20 @@ static void *nas_user_mngr(void *args)
 ```
 
 - Upon receiving PDU Session Establishment Command, this thread will send msg to `nas_nrue_task`
-```plantuml
-participant "nas_user_mngr" as mngr
-participant "nas_nrue_task" as nas
+```mermaid
+sequenceDiagram
+	participant mngr as "nas_user_mngr"
+	participant nas as "nas_nrue_task"
 
-note over mngr:nas_user_receive_and_process()
-note over mngr:nas_user_process_data()
-note over mngr:_nas_user_procedure()\n = _nas_user_proc_cgact()
-note over mngr:nas_activate_pdn()
-note over mngr:nas_request_pdusession()
-note over mngr:request_pdusession()
-mngr-->nas:itti_send_msg_to_task(TASK_NAS_NRUE)
-note over nas:generatePduSessionEstablishRequest()
-note over nas:send_nas_uplink_data_req()
+	note over mngr:nas_user_receive_and_process()
+	note over mngr:nas_user_process_data()
+	note over mngr:_nas_user_procedure()\n = _nas_user_proc_cgact()
+	note over mngr:nas_activate_pdn()
+	note over mngr:nas_request_pdusession()
+	note over mngr:request_pdusession()
+	mngr-->nas:itti_send_msg_to_task(TASK_NAS_NRUE)
+	note over nas:generatePduSessionEstablishRequest()
+	note over nas:send_nas_uplink_data_req()
 ```
 
 - Note, when Running OAI nrUE, flag `--net-slice` should be set
