@@ -50,7 +50,7 @@ graph TD;
 	B-->D{Creation/Termination};
 	B-->E{Operation};
 	E-->F{Supervision & Reporting};
-	E-->F{Modification};
+	E-->J{Modification};
 	C-->G{Selection};
 	C-->H{Admission Control};
 	C-->I{Scheduling};
