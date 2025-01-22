@@ -66,12 +66,12 @@ abc
 
 ```mermaid
 flowchart TD
-	A([gNB_dlsch_ulsch_scheduler()])
+	A(["gNB_dlsch_ulsch_scheduler()"])
 	G([End])
 	B[...]
-	C[nr_schedule_ulsch()<br>"this function schedule UL UP/DRB"]
+	C["nr_schedule_ulsch()"<br>"this function schedule UL UP/DRB"]
 	D[...]
-	E[nr_schedule_ue_spec()<br>"this function schedule DL UP/DRB"]
+	E["nr_schedule_ue_spec()"<br>"this function schedule DL UP/DRB"]
 	F[...]
 	A-->B-->C-->D-->E-->F-->G
 ```
