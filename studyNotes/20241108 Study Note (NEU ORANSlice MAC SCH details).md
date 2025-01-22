@@ -262,21 +262,22 @@ flowchart TD
 
 ### 4.3. `nr_pf_dl()`
 
-```flow
-st=>start: nr_pf_dl()
-e=>end: End
-op=>operation: ...
-op2=>operation: [this part is for retransmission]
-op3=>operation: ...
-cond=>condition: Iterate every UE not Done?
-op4=>operation: ...
-op5=>operation: nr_find_nb_rb()
-[count RB needed for the TB size from RLC]
-op6=>operation: ...
+```mermaid
+flowchart TD
+	A(["nr_pf_dl()"])
+	Z([End])
+	B[...]
+	C["this part is for retransmission"]
+	D[...]
+	E{"Iterate every UE not Done?"}
+	F[...]
+	G["nr_find_nb_rb()
+	#quot;count RB needed for the TB size from RLC#quot;"]
+	H[...]
 
 
-st->op->op2->op3->cond
-cond(yes)->op4
-cond(no)->e
-op4->op5->op6->cond
+	A-->B-->C-->D-->E
+	E --> |yes| F
+	E ----> |no| Z
+	F-->G-->H-->E
 ```
