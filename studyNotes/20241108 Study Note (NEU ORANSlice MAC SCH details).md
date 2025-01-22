@@ -240,7 +240,7 @@ flowchart TD
 	E --------> |no| Z
 	F --> G
 	G --> |yes| H
-	G ----> |no| K
+	G --> |no| K
 	H-->I-->J-->G
 	K-->E
 ```
