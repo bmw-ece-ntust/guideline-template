@@ -149,7 +149,7 @@ op4->op5->op6->cond
 ```mermaid
 flowchart TD
 	A(["nr_fr1_dlsch_preprocessor()"])
-	Z[End]
+	Z([End])
 	B[...]
 	C["nr_store_dl_slice_info()"]
 	D["nr_get_ue_active_slice_list()"]
@@ -246,18 +246,18 @@ op8->cond
 
 ### 4.2. `nvs_nr_dl()`
 
-```flow
-st=>start: nvs_nr_dl()
-e=>end: End
-op=>operation: ...
-op2=>operation: [this part will check which slice to schedule for this tti/slot]
-op3=>operation: ...
-op4=>operation: si->s[selected slice id]->dl_algo.run
-= nr_proportional_fair_wbcqi_dl.run()
-= nr_pf_dl()
-op5=>operation: ...
-
-st->op->op2->op3->op4->op5->e
+```mermaid
+flowchart TD
+	A(["nvs_nr_dl()"])
+	Z([End])
+	B[...]
+	C["this part will check which slice to schedule for this tti/slot"]
+	D[...]
+	E["si->s[selected slice id]->dl_algo.run
+	= nr_proportional_fair_wbcqi_dl.run()
+	= nr_pf_dl()"]
+	F[...]
+	A-->B-->C-->D-->E-->F-->Z
 ```
 
 ### 4.3. `nr_pf_dl()`
