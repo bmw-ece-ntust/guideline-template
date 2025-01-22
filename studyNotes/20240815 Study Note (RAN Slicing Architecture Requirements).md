@@ -45,10 +45,15 @@
 
 ```mermaid
 graph TD;
-	"Network Slicing in DU/CU/Core"->{"Life Cycle of a Network Slice" "Resource of a Network Slice"};
-	"Life Cycle of a Network Slice"->{"Creation/Termination" Operation};
-	Operation->{"Supervision & Reporting" Modification};
-	"Resource of a Network Slice"->{Selection "Admission Control" Scheduling};
+	A{Network Slicing in DU/CU/Core}-->B{Life Cycle of a Network Slice};
+	A{Network Slicing in DU/CU/Core}-->C{Resource of a Network Slice};
+	B-->D{Creation/Termination};
+	B-->E{Operation};
+	E-->F{Supervision & Reporting};
+	E-->F{Modification};
+	C-->G{Selection};
+	C-->H{Admission Control};
+	C-->I{Scheduling};
 ```
 
 
