@@ -70,10 +70,10 @@ flowchart TD
 	G([End])
 	B[...]
 	C["nr_schedule_ulsch()
-	this function schedule UL UP/DRB"]
+	#quot;this function schedule UL UP/DRB#quot;"]
 	D[...]
 	E["nr_schedule_ue_spec()
-	this function schedule DL UP/DRB"]
+	#quot;this function schedule DL UP/DRB#quot;"]
 	F[...]
 	A-->B-->C-->D-->E-->F-->G
 ```
