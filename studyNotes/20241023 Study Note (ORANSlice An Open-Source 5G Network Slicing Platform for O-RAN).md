@@ -14,7 +14,7 @@ O-RAN](#1-Paper-Summary)
 - [2024/10/23 Study Note (ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN)](#2024-10-23-study-note--oranslice--an-open-source-5g-network-slicing-platform-for-o-ran-)
           + [tags: `2024`](#tags---2024-)
   * [1. Paper Summary](#1-paper-summary)
-  * [2. What they add in OAI nrUE?](#2-what-they-add-in-oai-nrue-)
+  * [2. What they add in OAI nrUE?](#2-what-they-add-in-oai-nrue)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
