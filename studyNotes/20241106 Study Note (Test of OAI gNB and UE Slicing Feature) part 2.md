@@ -9,13 +9,13 @@
 - [x] [Test OAI gNB and OAI UE `develop` branch Slicing Feature in CU CP-UP Split](#4-evelop-branch-CU-CP-UP-Split)
 - [x] [Test OAI gNB and OAI UE `develop` branch Slicing Feature in CU-DU Split Multi CU-UP and Multi DU](#5-develop-branch-CU-CP-UP-Split-Multi-CU-UP-Multi-DU)
 - [x] [Test OAI gNB and OAI UE `develop` branch Slicing Feature in CU-DU Split Multi CU-UP, Multi DU, Multi Server](#6-develop-branch-CU-CP-UP-Split-Multi-CU-UP-Multi-DU-Multi-Server)
-- [ ] Test OAI gNB and OAI UE `rebased-5g-nvs-rc-rf` branch Slicing Feature -> Refer to [part 3](https://hackmd.io/@superwilfrid/Sy12p58Eyg) of note
+- [ ] Test OAI gNB and OAI UE `rebased-5g-nvs-rc-rf` branch Slicing Feature -> Refer to [part 3](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20241211%20Study%20Note%20(Test%20of%20OAI%20gNB%20and%20UE%20Slicing%20Feature)%20part%203.md) of note
 
 **References:**
 - [OAI | NR SA Tutorial OAI nrUE](https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/doc/NR_SA_Tutorial_OAI_nrUE.md)
 - [Wilfrid | RAN Slicing Architecture Requirements](https://hackmd.io/@superwilfrid/ry21MNnqC)
 - [Wilfrid | ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN](https://hackmd.io/@superwilfrid/SJ5G4zLgJl#2-What-they-add-in-OAI-nrUE)
-- [Wilfrid | Test of OAI gNB and UE Slicing Feature](https://hackmd.io/@superwilfrid/rys33zIkJl)
+- [Wilfrid | Test of OAI gNB and UE Slicing Feature](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20241011%20Study%20Note%20(Test%20of%20OAI%20gNB%20and%20UE%20Slicing%20Feature).md)
 - [sharetechnote | 5G/NR  - Network Slicing](https://www.sharetechnote.com/html/5G/5G_NetworkSlicing.html)
 ![image](https://hackmd.io/_uploads/rkhGBXCgyl.png)
 
