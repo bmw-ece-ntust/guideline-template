@@ -123,23 +123,23 @@ flowchart TD
 
 ### 2.4. `pf_dl()`
 
-```flow
-st=>start: pf_dl()
-e=>end: End
-op=>operation: ...
-op2=>operation: [this part is for retransmission]
-op3=>operation: ...
-cond=>condition: Iterate every UE not Done?
-op4=>operation: ...
-op5=>operation: nr_find_nb_rb()
-[count RB needed for the TB size from RLC]
-op6=>operation: ...
-
-
-st->op->op2->op3->cond
-cond(yes)->op4
-cond(no)->e
-op4->op5->op6->cond
+```mermaid
+flowchart TD
+	A(["pf_dl()"])
+	Z([End])
+	B[...]
+	C["#quot;this part is for retransmission#quot;"]
+	D[...]
+	E{"Iterate every UE not Done?"}
+	F[...]
+	G["nr_find_nb_rb()
+	#quot;count RB needed for the TB size from RLC#quot;"]
+	H[...]
+	
+	A-->B-->C-->D-->E
+	E --> |yes| F
+	E ------> |no| Z
+	F-->G-->H-->E
 ```
 
 ## 3. RRM Policy based OAI MAC PF Scheduler Flow
