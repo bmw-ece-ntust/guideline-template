@@ -217,31 +217,32 @@ op6->op7->op8->cond2
 
 ### 4.1. `nr_schedule_ue_spec()`
 
-```flow
-st=>start: nr_schedule_ue_spec()
-e=>end: End
-op=>operation: ...
-op2=>operation: gNB_mac->pre_processor_dl.dl()
-= nvs_nr_dl()
-[this function do PRB calculation]
-op3=>operation: ...
-cond=>condition: Iterate every UE not Done?
-op4=>operation: ...
-cond2=>condition: Iterate every LC not Done?
-op5=>operation: ...
-op6=>operation: mac_rlc_data_req()
-[this function fills data to PRB]
-op7=>operation: ...
-op8=>operation: ...
+```mermaid
+flowchart TD
+	A(["nr_schedule_ue_spec()"])
+	Z([End])
+	B[...]
+	C["gNB_mac->pre_processor_dl.dl()
+	= nvs_nr_dl()
+	#quot;this function do PRB calculation#quot;"]
+	D[...]
+	E{"Iterate every UE not Done?"}
+	F[...]
+	G{"Iterate every LC not Done?"}
+	H[...]
+	I["mac_rlc_data_req()
+	#quot;this function fills data to PRB#quot;"]
+	J[...]
+	K[...]
 
-st->op->op2->op3->cond
-cond(yes)->op4
-cond(no)->e
-op4->cond2
-cond2(yes)->op5
-cond2(no)->op8
-op5->op6->op7->cond2
-op8->cond
+	A-->B-->C-->D-->E
+	E --> |yes| F
+	E --------> |no| Z
+	F --> G
+	G --> |yes| H
+	G ----> |no| K
+	H-->I-->J-->G
+	K-->E
 ```
 
 ### 4.2. `nvs_nr_dl()`
@@ -278,6 +279,6 @@ flowchart TD
 
 	A-->B-->C-->D-->E
 	E --> |yes| F
-	E ----> |no| Z
+	E ------> |no| Z
 	F-->G-->H-->E
 ```
