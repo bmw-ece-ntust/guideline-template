@@ -100,7 +100,7 @@ flowchart TD
 
 	A-->B-->C-->D-->E
 	E--> |yes| F
-	E ------> |no| Z
+	E --------> |no| Z
 	F-->G
 	G --> |yes| H
 	G ----> |no| K
