@@ -8,7 +8,7 @@
 
 
 **References:**
-- [Wilfrid | ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN](https://hackmd.io/@superwilfrid/SJ5G4zLgJl#2-What-they-add-in-OAI-nrUE)
+- [Wilfrid | ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20241023%20Study%20Note%20(ORANSlice%20An%20Open-Source%205G%20Network%20Slicing%20Platform%20for%20O-RAN).md#2-what-they-add-in-oai-nrue)
 - ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN
 - https://github.com/wineslab/ORANSlice
 - https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/doc/MAC/mac-usage.md?ref_type=heads
