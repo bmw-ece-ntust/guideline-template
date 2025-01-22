@@ -13,7 +13,7 @@
 
 **References:**
 - [OAI | NR SA Tutorial OAI nrUE](https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/doc/NR_SA_Tutorial_OAI_nrUE.md)
-- [Wilfrid | RAN Slicing Architecture Requirements](https://hackmd.io/@superwilfrid/ry21MNnqC)
+- [Wilfrid | RAN Slicing Architecture Requirements](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240815%20Study%20Note%20(RAN%20Slicing%20Architecture%20Requirements).md)
 - [Wilfrid | ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20241023%20Study%20Note%20(ORANSlice%20An%20Open-Source%205G%20Network%20Slicing%20Platform%20for%20O-RAN).md#2-what-they-add-in-oai-nrue)
 - [Wilfrid | Test of OAI gNB and UE Slicing Feature](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20241011%20Study%20Note%20(Test%20of%20OAI%20gNB%20and%20UE%20Slicing%20Feature).md)
 - [sharetechnote | 5G/NR  - Network Slicing](https://www.sharetechnote.com/html/5G/5G_NetworkSlicing.html)

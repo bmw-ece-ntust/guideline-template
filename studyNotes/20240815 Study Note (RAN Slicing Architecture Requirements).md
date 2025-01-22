@@ -43,37 +43,13 @@
 **S-NSSAI** is a unique identifier for each network slice. NSSAI (Network Slice Selection Assistance Information) includes one or a list of s-NSSAIs which is a combination of mandatary SST (Slice/Service Type) and an optional SD (Slice Differentiator).
 
 
-```graphviz
-digraph hierarchy {
-
-                nodesep=1.0 // increases the separation between nodes
-
-                node [color=Red,fontname="times-bold",shape=box] //All nodes will this shape and colour
-                edge [color=Blue, style=dashed] //All the lines look like this
-
-                "Network Slicing in DU/CU/Core"->{"Life Cycle of a Network Slice" "Resource of a Network Slice"}
-                "Life Cycle of a Network Slice"->{"Creation/Termination" Operation}
-                Operation->{"Supervision & Reporting" Modification}
-                "Resource of a Network Slice"->{Selection "Admission Control" Scheduling}
-                
-}
+```mermaid
+graph TD;
+	"Network Slicing in DU/CU/Core"->{"Life Cycle of a Network Slice" "Resource of a Network Slice"}
+	"Life Cycle of a Network Slice"->{"Creation/Termination" Operation}
+	Operation->{"Supervision & Reporting" Modification}
+	"Resource of a Network Slice"->{Selection "Admission Control" Scheduling}
 ```
-
- Figure Source Code
-graphviz
-digraph hierarchy {
-
-                nodesep=1.0 // increases the separation between nodes
-
-                node [color=Red,fontname="times-bold",shape=box] //All nodes will this shape and colour
-                edge [color=Blue, style=dashed] //All the lines look like this
-
-                "Network Slicing in DU/CU/Core"->{"Life Cycle of a Network Slice" "Resource of a Network Slice"}
-                "Life Cycle of a Network Slice"->{"Creation/Termination" Operation}
-                Operation->{"Supervision & Reporting" Modification}
-                "Resource of a Network Slice"->{"Admission Control" Scheduling}
-                
-}
 
 
  Life Cycle of a Network Slice Details
