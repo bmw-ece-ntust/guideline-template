@@ -187,30 +187,31 @@ flowchart TD
 
 ### 3.3. `pf_dl_slice()`
 
-```flow
-st=>start: pf_dl_slice()()
-e=>end: End
-op=>operation: ...
-cond=>condition: Iterate every UE not Done?
-op2=>operation: ...
-op3=>operation: [calculate UE coeff for PF]
-op4=>operation: ...
-op5=>operation: ...
-cond2=>condition: Iterate every UE not Done?
-op6=>operation: ...
-op7=>operation: nr_find_nb_rb()
-[count RB needed for the TB size from RLC]
-op8=>operation: ...
+```mermaid
+flowchart TD
+	A(["pf_dl_slice()"])
+	Z([End])
+	B[...]
+	C{"Iterate every UE not Done?"}
+	D[...]
+	E["#quot;calculate UE coeff for PF#quot;"]
+	F[...]
+	G[...]
+	H{"Iterate every UE not Done?"}
+	I[...]
+	J["nr_find_nb_rb()
+	#quot;count RB needed for the TB size from RLC#quot;"]
+	K[...]
 
 
-st->op->cond
-cond(yes)->op2
-cond(no)->op5
-op2->op3->op4->cond
-op5->cond2
-cond2(yes)->op6
-cond2(no)->e
-op6->op7->op8->cond2
+	A-->B-->C
+	C --> |yes| D
+	C ------> |no| G
+	D-->E-->F-->C
+	G-->H
+	H --> |yes| I
+	H ------> |no| Z
+	I-->J-->K-->H
 ```
 
 ## 4. NVS RRM Policy based OAI MAC SCH Flow
