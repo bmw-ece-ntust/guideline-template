@@ -110,15 +110,15 @@ flowchart TD
 
 ### 2.3. `nr_fr1_dlsch_preprocessor()`
 
-```flow
-st=>start: nr_fr1_dlsch_preprocessor()
-e=>end: End
-op=>operation: ...
-op2=>operation: pf_dl()
-[this function do PRB calculation]
-op3=>operation: ...
-
-st->op->op2->op3->e
+```mermaid
+flowchart TD
+	A(["nr_fr1_dlsch_preprocessor()"])
+	Z([End])
+	B[...]
+	C["pf_dl()
+	#quot;this function do PRB calculation#quot;"]
+	D[...]
+	A-->B-->C-->D-->Z
 ```
 
 ### 2.4. `pf_dl()`
@@ -146,20 +146,20 @@ op4->op5->op6->cond
 
 ### 3.1. `nr_fr1_dlsch_preprocessor()`
 
-```flow
-st=>start: nr_fr1_dlsch_preprocessor()
-e=>end: End
-op=>operation: ...
-op2=>operation: nr_store_dl_slice_info()
-op3=>operation: nr_get_ue_active_slice_list()
-op4=>operation: nr_store_dlsch_buffer()
-op5=>operation: nr_slice_preprocess()
-op6=>operation: nr_slice_prb_estimate()
-op7=>operation: qsort()
-op8=>operation: dl_sched_unit()
-[do allocation for inter slice]
-
-st->op->op2->op3->op4->op5->op6->op7->op8->e
+```mermaid
+flowchart TD
+	A(["nr_fr1_dlsch_preprocessor()"])
+	Z[End]
+	B[...]
+	C["nr_store_dl_slice_info()"]
+	D["nr_get_ue_active_slice_list()"]
+	E["nr_store_dlsch_buffer()"]
+	F["nr_slice_preprocess()"]
+	G["nr_slice_prb_estimate()"]
+	H["qsort()"]
+	I["dl_sched_unit()
+	#quot;do allocation for inter slice#quot;"]
+	A-->B-->C-->D-->E-->F-->G-->H-->I-->Z
 ```
 
 ### 3.2. `dl_sched_unit()`
