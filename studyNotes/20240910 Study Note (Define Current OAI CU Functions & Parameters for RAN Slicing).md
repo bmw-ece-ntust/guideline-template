@@ -175,99 +175,101 @@ sequenceDiagram
 
 
 
-```plantuml
-participant "sctp_eNB_task" as sctp
-participant "F1AP_CU_task" as f1ap
-participant "rrc_gNB_task" as rrc
-participant "ngap_gNB_task" as ngap
-participant "CN" as cn
+```mermaid
+sequenceDiagram
+	participant sctp as "sctp_eNB_task"
+	participant f1ap as "F1AP_CU_task"
+	participant rrc as "rrc_gNB_task"
+	participant ngap as "ngap_gNB_task"
+	participant cn as "CN"
 
-cn-->ngap: "PDU Session Resource Setup Request"
-note over ngap:ngap_gNB_decode_pdu()
-note over ngap:ngap_gNB_handle_pdusession_setup_request()
-note over ngap:"change NSSAI SD to 0xffffff if SD is NULL"
-ngap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_process_PDUSESSION_SETUP_REQUEST()
-note over rrc:trigger_bearer_setup()
-note over rrc:generateDRB()
-note over rrc:get_new_cuup_for_ue()
-note over rrc:select_cuup_slice()
-note over rrc: bearer_context_setup()\n = cucp_cuup_bearer_context_setup_direct()
-note over rrc: e1_bearer_context_setup()
-note over rrc: drb_gtpu_create()
-note over rrc: gtpv1u_create_ngu_tunnel()
-note over rrc: newGtpuCreateTunnel()
-note over rrc: nr_pdcp_add_drbs()
-note over rrc: add_drb()
-note over rrc: new_nr_sdap_entity()
-note over rrc: bearer_setup_response()\n = bearer_setup_response_direct()
-rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_process_e1_bearer_context_setup_resp()
-note over rrc:rrc_gNB_generate_UeContextSetupRequest()
-note over rrc:activate_srb()
-note over rrc:ue_context_setup_request()\n = ue_context_setup_request_f1ap()
-rrc-->f1ap: itti_send_msg_to_task(TASK_CU_F1)
-note over f1ap:CU_send_UE_CONTEXT_SETUP_REQUEST()
-note over f1ap:f1ap_itti_send_sctp_data_req()
-f1ap-->sctp: itti_send_msg_to_task(TASK_SCTP)
-note over sctp:sctp_send_data()
-note over sctp:...
-sctp-->f1ap
-note over f1ap:cu_task_handle_sctp_data_ind()
-note over f1ap:f1ap_handle_message()
-note over f1ap:f1ap_messages_processing()\n =CU_handle_UE_CONTEXT_SETUP_RESPONSE()
-f1ap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_CU_process_ue_context_setup_response()
-note over rrc:e1_send_bearer_updates()
-note over rrc:bearer_context_mod()\n = cucp_cuup_bearer_context_modif_direct()
-note over rrc:e1_bearer_context_modif()
-note over rrc:bearer_modif_response()\n = bearer_modif_response_direct()
-rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_generate_dedicatedRRCReconfiguration()
-note over rrc:nr_rrc_transfer_protected_rrc_message()
-note over rrc:nr_pdcp_data_req_srb()
-note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
-note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_f1ap()
-rrc-->f1ap: itti_send_msg_to_task(TASK_CU_F1)
-note over rrc:rrc_gNB_process_e1_bearer_context_modif_resp()
-note over f1ap:CU_send_DL_RRC_MESSAGE_TRANSFER()
-note over f1ap:f1ap_itti_send_sctp_data_req()
-f1ap-->sctp: itti_send_msg_to_task(TASK_SCTP)
-note over sctp:sctp_send_data()
-note over sctp:...
-sctp-->f1ap
-note over f1ap:cu_task_handle_sctp_data_ind()
-note over f1ap:f1ap_handle_message()
-note over f1ap:f1ap_messages_processing()\n = CU_handle_UL_RRC_MESSAGE_TRANSFER()
-note over f1ap:nr_pdcp_data_ind()
-note over f1ap:enqueue_pdcp_data_ind()
-f1ap-->rrc
-note over rrc:rrc_gNBdecode_dcch()
-note over rrc:handle_rrcReconfigurationComplete()
-note over rrc:rrc_gNB_send_NGAP_PDUSESSION_SETUP_RESP()
-rrc-->ngap: itti_send_msg_to_task(TASK_NGAP)
-ngap-->cn: "PDU Session Resource Setup Response"
+	cn-->ngap: "PDU Session Resource Setup Request"
+	note over ngap:ngap_gNB_decode_pdu()
+	note over ngap:ngap_gNB_handle_pdusession_setup_request()
+	note over ngap:"change NSSAI SD to 0xffffff if SD is NULL"
+	ngap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_process_PDUSESSION_SETUP_REQUEST()
+	note over rrc:trigger_bearer_setup()
+	note over rrc:generateDRB()
+	note over rrc:get_new_cuup_for_ue()
+	note over rrc:select_cuup_slice()
+	note over rrc: bearer_context_setup()\n = cucp_cuup_bearer_context_setup_direct()
+	note over rrc: e1_bearer_context_setup()
+	note over rrc: drb_gtpu_create()
+	note over rrc: gtpv1u_create_ngu_tunnel()
+	note over rrc: newGtpuCreateTunnel()
+	note over rrc: nr_pdcp_add_drbs()
+	note over rrc: add_drb()
+	note over rrc: new_nr_sdap_entity()
+	note over rrc: bearer_setup_response()\n = bearer_setup_response_direct()
+	rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_process_e1_bearer_context_setup_resp()
+	note over rrc:rrc_gNB_generate_UeContextSetupRequest()
+	note over rrc:activate_srb()
+	note over rrc:ue_context_setup_request()\n = ue_context_setup_request_f1ap()
+	rrc-->f1ap: itti_send_msg_to_task(TASK_CU_F1)
+	note over f1ap:CU_send_UE_CONTEXT_SETUP_REQUEST()
+	note over f1ap:f1ap_itti_send_sctp_data_req()
+	f1ap-->sctp: itti_send_msg_to_task(TASK_SCTP)
+	note over sctp:sctp_send_data()
+	note over sctp:...
+	sctp-->f1ap
+	note over f1ap:cu_task_handle_sctp_data_ind()
+	note over f1ap:f1ap_handle_message()
+	note over f1ap:f1ap_messages_processing()\n =CU_handle_UE_CONTEXT_SETUP_RESPONSE()
+	f1ap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_CU_process_ue_context_setup_response()
+	note over rrc:e1_send_bearer_updates()
+	note over rrc:bearer_context_mod()\n = cucp_cuup_bearer_context_modif_direct()
+	note over rrc:e1_bearer_context_modif()
+	note over rrc:bearer_modif_response()\n = bearer_modif_response_direct()
+	rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_generate_dedicatedRRCReconfiguration()
+	note over rrc:nr_rrc_transfer_protected_rrc_message()
+	note over rrc:nr_pdcp_data_req_srb()
+	note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
+	note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_f1ap()
+	rrc-->f1ap: itti_send_msg_to_task(TASK_CU_F1)
+	note over rrc:rrc_gNB_process_e1_bearer_context_modif_resp()
+	note over f1ap:CU_send_DL_RRC_MESSAGE_TRANSFER()
+	note over f1ap:f1ap_itti_send_sctp_data_req()
+	f1ap-->sctp: itti_send_msg_to_task(TASK_SCTP)
+	note over sctp:sctp_send_data()
+	note over sctp:...
+	sctp-->f1ap
+	note over f1ap:cu_task_handle_sctp_data_ind()
+	note over f1ap:f1ap_handle_message()
+	note over f1ap:f1ap_messages_processing()\n = CU_handle_UL_RRC_MESSAGE_TRANSFER()
+	note over f1ap:nr_pdcp_data_ind()
+	note over f1ap:enqueue_pdcp_data_ind()
+	f1ap-->rrc
+	note over rrc:rrc_gNBdecode_dcch()
+	note over rrc:handle_rrcReconfigurationComplete()
+	note over rrc:rrc_gNB_send_NGAP_PDUSESSION_SETUP_RESP()
+	rrc-->ngap: itti_send_msg_to_task(TASK_NGAP)
+	ngap-->cn: "PDU Session Resource Setup Response"
 
 ```
 
 ## 3. Initial Context Setup Request (gNB)
 
-```plantuml
-participant "rrc_gNB_task" as rrc
-participant "ngap_gNB_task" as ngap
-participant "CN" as cn
+```mermaid
+sequenceDiagram
+	participant rrc as "rrc_gNB_task"
+	participant ngap as "ngap_gNB_task"
+	participant cn as "CN"
 
-cn-->ngap: "Initial Context Setup Request"
-note over ngap:ngap_gNB_handle_initial_context_request() [1,2,3,4]
-ngap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_process_NGAP_CONTEXT_SETUP_REQ()
-note over rrc:rrc_gNB_process_security() [5]
-note over rrc:process_gNB_security_key() [6]
-note over rrc:rrc_gNB_generate_SecurityModeCommand() [7]
-note over rrc:nr_rrc_transfer_protected_rrc_message()
-note over rrc:nr_pdcp_data_req_srb()
-note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
-note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_direct()
+	cn-->ngap: "Initial Context Setup Request"
+	note over ngap:ngap_gNB_handle_initial_context_request() [1,2,3,4]
+	ngap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_process_NGAP_CONTEXT_SETUP_REQ()
+	note over rrc:rrc_gNB_process_security() [5]
+	note over rrc:process_gNB_security_key() [6]
+	note over rrc:rrc_gNB_generate_SecurityModeCommand() [7]
+	note over rrc:nr_rrc_transfer_protected_rrc_message()
+	note over rrc:nr_pdcp_data_req_srb()
+	note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
+	note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_direct()
 ```
 
  Example Log
@@ -284,43 +286,45 @@ note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_direct()
 
 ## 4. Initial Context Setup Request (CU)
 
-```plantuml
-participant "sctp_eNB_task" as sctp
-participant "F1AP_CU_task" as f1ap
-participant "rrc_gNB_task" as rrc
-participant "ngap_gNB_task" as ngap
-participant "CN" as cn
+```mermaid
+sequenceDiagram
+	participant sctp as "sctp_eNB_task"
+	participant f1ap as "F1AP_CU_task"
+	participant rrc as "rrc_gNB_task"
+	participant ngap as "ngap_gNB_task"
+	participant cn as "CN"
 
-cn-->ngap: "Initial Context Setup Request"
-note over ngap:ngap_gNB_handle_initial_context_request() [1,2,3,4]
-ngap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_process_NGAP_CONTEXT_SETUP_REQ()
-note over rrc:rrc_gNB_process_security() [5]
-note over rrc:process_gNB_security_key() [6]
-note over rrc:rrc_gNB_generate_SecurityModeCommand() [7]
-note over rrc:nr_rrc_transfer_protected_rrc_message()
-note over rrc:nr_pdcp_data_req_srb()
-note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
-note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_f1ap()
-rrc-->f1ap: itti_send_msg_to_task(TASK_CU_F1)
-note over f1ap:CU_send_DL_RRC_MESSAGE_TRANSFER()
-note over f1ap:f1ap_itti_send_sctp_data_req()
-f1ap-->sctp: itti_send_msg_to_task(TASK_SCTP)
-note over sctp:sctp_send_data()
+	cn-->ngap: "Initial Context Setup Request"
+	note over ngap:ngap_gNB_handle_initial_context_request() [1,2,3,4]
+	ngap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_process_NGAP_CONTEXT_SETUP_REQ()
+	note over rrc:rrc_gNB_process_security() [5]
+	note over rrc:process_gNB_security_key() [6]
+	note over rrc:rrc_gNB_generate_SecurityModeCommand() [7]
+	note over rrc:nr_rrc_transfer_protected_rrc_message()
+	note over rrc:nr_pdcp_data_req_srb()
+	note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
+	note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_f1ap()
+	rrc-->f1ap: itti_send_msg_to_task(TASK_CU_F1)
+	note over f1ap:CU_send_DL_RRC_MESSAGE_TRANSFER()
+	note over f1ap:f1ap_itti_send_sctp_data_req()
+	f1ap-->sctp: itti_send_msg_to_task(TASK_SCTP)
+	note over sctp:sctp_send_data()
 ```
 
 ## 5. Initial Context Setup Response (gNB)
 
-```plantuml
-participant "rrc_gNB_task" as rrc
-participant "ngap_gNB_task" as ngap
-participant "CN" as cn
+```mermaid
+sequenceDiagram
+	participant rrc as "rrc_gNB_task"
+	participant ngap as "ngap_gNB_task"
+	participant cn as "CN"
 
-note over rrc:handle_rrcReconfigurationComplete() [1]
-note over rrc:rrc_gNB_send_NGAP_INITIAL_CONTEXT_SETUP_RESP()
-rrc-->ngap: itti_send_msg_to_task(TASK_NGAP)
-note over ngap:ngap_gNB_initial_ctxt_resp() [2]
-ngap-->cn: "Initial Context Setup response"
+	note over rrc:handle_rrcReconfigurationComplete() [1]
+	note over rrc:rrc_gNB_send_NGAP_INITIAL_CONTEXT_SETUP_RESP()
+	rrc-->ngap: itti_send_msg_to_task(TASK_NGAP)
+	note over ngap:ngap_gNB_initial_ctxt_resp() [2]
+	ngap-->cn: "Initial Context Setup response"
 ```
 
  Example Log
@@ -329,53 +333,52 @@ ngap-->cn: "Initial Context Setup response"
 [NR_RRC]   Send message to sctp: NGAP_InitialContextSetupResponse
 ```
 
-
-
 ## 6. Initial Context Setup Response (CU)
 
-```plantuml
-participant "sctp_eNB_task" as sctp
-participant "F1AP_CU_task" as f1ap
-participant "rrc_gNB_task" as rrc
-participant "ngap_gNB_task" as ngap
-participant "CN" as cn
+```mermaid
+sequenceDiagram
+	participant sctp as "sctp_eNB_task"
+	participant f1ap as "F1AP_CU_task"
+	participant rrc as "rrc_gNB_task"
+	participant ngap as "ngap_gNB_task"
+	participant cn as "CN"
 
-note over sctp:...
-sctp-->f1ap
-note over rrc:cu_task_handle_sctp_data_ind()
-note over rrc:f1ap_handle_message()
-note over rrc:f1ap_messages_processing()\n = CU_handle_UL_RRC_MESSAGE_TRANSFER()
-note over rrc:nr_pdcp_data_ind()
-note over rrc:enqueue_pdcp_data_ind()
-f1ap-->rrc
-note over rrc:rrc_gNBdecode_dcch()
-note over rrc:handle_rrcReconfigurationComplete() [1]
-note over rrc:rrc_gNB_send_NGAP_INITIAL_CONTEXT_SETUP_RESP()
-rrc-->ngap: itti_send_msg_to_task(TASK_NGAP)
-note over ngap:ngap_gNB_initial_ctxt_resp() [2]
-ngap-->cn: "Initial Context Setup response"
+	note over sctp:...
+	sctp-->f1ap
+	note over rrc:cu_task_handle_sctp_data_ind()
+	note over rrc:f1ap_handle_message()
+	note over rrc:f1ap_messages_processing()\n = CU_handle_UL_RRC_MESSAGE_TRANSFER()
+	note over rrc:nr_pdcp_data_ind()
+	note over rrc:enqueue_pdcp_data_ind()
+	f1ap-->rrc
+	note over rrc:rrc_gNBdecode_dcch()
+	note over rrc:handle_rrcReconfigurationComplete() [1]
+	note over rrc:rrc_gNB_send_NGAP_INITIAL_CONTEXT_SETUP_RESP()
+	rrc-->ngap: itti_send_msg_to_task(TASK_NGAP)
+	note over ngap:ngap_gNB_initial_ctxt_resp() [2]
+	ngap-->cn: "Initial Context Setup response"
 ```
 
 ## 7. Slice Configuration (gNB/CU)
-
 
 - The save of CU's Slice configration is done in `RB_INSERT(rrc_cuup_tree)`. It can be from 2 source:
     - If CU have CP UP split, CU-UP will report to CU-CP about the slice it support in E1 Setup
     - If CU don't have CP UP split, CU will store slice configuration from CU's configuration file. It is triggered in a self initiated E1 Setup (please see below figure)
 
 
-```plantuml
-participant "rrc_gNB_task" as rrc
-participant "gNB_main" as main
+```mermaid
+sequenceDiagram
+	participant rrc as "rrc_gNB_task"
+	participant main as "gNB_main"
 
-note over main:RCconfig_NRRRC() [5~6]
-note over main:openair_rrc_gNB_configuration() [7]
-note over main:gNB_app_register() [29]
-note over main:RCconfig_NR_NG() [22~24]
-note over main:RCconfig_NR_CU_E1() [58~60]
-main-->rrc:itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_process_e1_setup_req() [75]
-note over rrc:RB_INSERT(rrc_cuup_tree)
+	note over main:RCconfig_NRRRC() [5~6]
+	note over main:openair_rrc_gNB_configuration() [7]
+	note over main:gNB_app_register() [29]
+	note over main:RCconfig_NR_NG() [22~24]
+	note over main:RCconfig_NR_CU_E1() [58~60]
+	main-->rrc:itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_process_e1_setup_req() [75]
+	note over rrc:RB_INSERT(rrc_cuup_tree)
 ```
 
  Example Log
@@ -460,13 +463,13 @@ note over rrc:RB_INSERT(rrc_cuup_tree)
 
 ## 8. Supported Slice Report to CN (CU)
 
+```mermaid
+sequenceDiagram
+	participant ngap as "ngap_gNB_task"
 
-```plantuml
-participant "ngap_gNB_task" as ngap
-
-note over ngap:ngap_gNB_handle_sctp_association_resp()
-note over ngap:ngap_gNB_generate_ng_setup_request()
-note over ngap:ngap_gNB_itti_send_sctp_()
+	note over ngap:ngap_gNB_handle_sctp_association_resp()
+	note over ngap:ngap_gNB_generate_ng_setup_request()
+	note over ngap:ngap_gNB_itti_send_sctp_()
 ```
 
 ## 9. E2SM-KPM
@@ -489,17 +492,18 @@ From O-RAN.WG3.E2SM-KPM-version specification, we implemented:
 - REPORT Service Style 4 ("Common condition-based, UE-level" - section 7.4.5) - fetch above measurements per each UE that matches common criteria (e.g. S-NSSAI).
 
 
-```plantuml
-participant "thrd_agent" as e2
+```mermaid
+sequenceDiagram
+	participant e2 as "thrd_agent"
 
-note over e2:read_kpm_sm()
-note over e2:match_cond_arr()\n = match_s_nssai_test_cond_type()\n = filter_ues_by_s_nssai_in_cu()
-note over e2:capture_sst_sd()
-note over e2:nssai_matches()
-note over e2:du_get_f1_ue_data()
-note over e2:fill_ue_id_data()\n = fill_e2sm_cu_ue_id_data()
-note over e2:fill_kpm_ind_msg_frm_3()
-note over e2:fill_kpm_ind_msg_frm_1()
-note over e2:fill_kpm_meas_data_item()
-note over e2:get_kpm_meas_value()
+	note over e2:read_kpm_sm()
+	note over e2:match_cond_arr()\n = match_s_nssai_test_cond_type()\n = filter_ues_by_s_nssai_in_cu()
+	note over e2:capture_sst_sd()
+	note over e2:nssai_matches()
+	note over e2:du_get_f1_ue_data()
+	note over e2:fill_ue_id_data()\n = fill_e2sm_cu_ue_id_data()
+	note over e2:fill_kpm_ind_msg_frm_3()
+	note over e2:fill_kpm_ind_msg_frm_1()
+	note over e2:fill_kpm_meas_data_item()
+	note over e2:get_kpm_meas_value()
 ```
