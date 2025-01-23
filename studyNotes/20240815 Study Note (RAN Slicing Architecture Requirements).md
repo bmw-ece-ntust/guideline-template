@@ -105,7 +105,7 @@ graph TD;
 ![image](https://hackmd.io/_uploads/HJ1_y8ZA0.png)
 
 
-More detail about each message can be accessed from this [note](https://hackmd.io/@superwilfrid/ryKdDBucA)
+More detail about each message can be accessed from this [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240813%20Study%20Note%20(What%20parameters%20need%20to%20get%20from%20Core).md)
 
 
 ## 3. What parameters need to get from CU

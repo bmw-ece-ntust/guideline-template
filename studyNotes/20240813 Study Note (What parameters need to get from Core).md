@@ -416,7 +416,7 @@ NAS message container:
 | Description | The purpose of the Initial Context Setup procedure is to establish the necessary overall initial UE Context at the NG-RAN node, when required, including PDU session context, the Security Key, Mobility Restriction List, UE Radio Capability and UE Security Capabilities, etc.<br><br> The AMF initiates a session setup with the gNB. The message typically contains the Registration Accept NAS message. The message carries one or more PDU Session setup requests. Each PDU session is addressed with the "PDU Session ID". |
 | Reference   | TS 38.413                                                                                                                |
 | Flow        | AMF ➔ gNB |
-| Fields            | [See below](#211-dields)                                                                                                                         |
+| Fields            | [See below](#211-fields)                                                                                                                         |
 
 #### 2.1.1. Fields
 
