@@ -17,14 +17,14 @@
           + [tags: `2024`](#tags---2024-)
   * [0. Summary](#0-summary)
     + [0.1. OAI CU's Task](#01-oai-cu-s-task)
-  * [1. PDU Session Setup Request (gNB)](#1-pdu-session-setup-request--gnb-)
-  * [2. PDU Session Setup Request (CU)](#2-pdu-session-setup-request--cu-)
-  * [3. Initial Context Setup Request (gNB)](#3-initial-context-setup-request--gnb-)
-  * [4. Initial Context Setup Request (CU)](#4-initial-context-setup-request--cu-)
-  * [5. Initial Context Setup Response (gNB)](#5-initial-context-setup-response--gnb-)
-  * [6. Initial Context Setup Response (CU)](#6-initial-context-setup-response--cu-)
-  * [7. Slice Configuration (gNB/CU)](#7-slice-configuration--gnb-cu-)
-  * [8. Supported Slice Report to CN (CU)](#8-supported-slice-report-to-cn--cu-)
+  * [1. PDU Session Setup Request (gNB)](#1-pdu-session-setup-request-gnb)
+  * [2. PDU Session Setup Request (CU)](#2-pdu-session-setup-request-cu)
+  * [3. Initial Context Setup Request (gNB)](#3-initial-context-setup-request-gnb)
+  * [4. Initial Context Setup Request (CU)](#4-initial-context-setup-request-cu)
+  * [5. Initial Context Setup Response (gNB)](#5-initial-context-setup-response-gnb)
+  * [6. Initial Context Setup Response (CU)](#6-initial-context-setup-response-cu)
+  * [7. Slice Configuration (gNB/CU)](#7-slice-configuration-gnbcu)
+  * [8. Supported Slice Report to CN (CU)](#8-supported-slice-report-to-cn-cu)
   * [9. E2SM-KPM](#9-e2sm-kpm)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -69,64 +69,65 @@ columns 1
 
 ## 1. PDU Session Setup Request (gNB)
 
-```plantuml
-participant "rrc_gNB_task" as rrc
-participant "ngap_gNB_task" as ngap
-participant "CN" as cn
+```mermaid
+sequenceDiagram
+	participant rrc as "rrc_gNB_task"
+	participant ngap as "ngap_gNB_task"
+	participant cn as "CN"
 
-cn-->ngap: "PDU Session Resource Setup Request"
-note over ngap:ngap_gNB_decode_pdu() [1]
-note over ngap:ngap_gNB_handle_pdusession_setup_request()
-note over ngap:"change NSSAI SD to 0xffffff if SD is NULL"
-ngap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_process_PDUSESSION_SETUP_REQUEST()
-note over rrc:trigger_bearer_setup() [3]
-note over rrc:generateDRB() [4]
-note over rrc:get_new_cuup_for_ue() [6]
-note over rrc:select_cuup_slice() [5]
-note over rrc: bearer_context_setup()\n = cucp_cuup_bearer_context_setup_direct()
-note over rrc: e1_bearer_context_setup()
-note over rrc: drb_gtpu_create()
-note over rrc: gtpv1u_create_ngu_tunnel()
-note over rrc: newGtpuCreateTunnel() [7]
-note over rrc: nr_pdcp_add_drbs()
-note over rrc: add_drb() [8]
-note over rrc: new_nr_sdap_entity() [9]
-note over rrc: bearer_setup_response()\n = bearer_setup_response_direct()
-rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_process_e1_bearer_context_setup_resp()
-note over rrc:rrc_gNB_generate_UeContextSetupRequest()
-note over rrc:activate_srb() [10]
-note over rrc:ue_context_setup_request()\n = ue_context_setup_request_direct()
-note over rrc:ue_context_setup_request()
-note over rrc:handle_ue_context_srbs_setup()
-note over rrc:nr_rlc_add_srb() [11]
-note over rrc:handle_ue_context_drbs_setup()
-note over rrc:nr_rlc_add_drb() [12]
-note over rrc:nr_rlc_add_drb() [13]
-note over rrc:update_cellGroupConfig()
-note over rrc:get_config_srs() [15]
-note over rrc:get_config_srs() [16]
-note over rrc:ue_context_setup_response()\n = ue_context_setup_response_direct()
-rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_CU_process_ue_context_setup_response() [21]
-note over rrc:e1_send_bearer_updates()
-note over rrc:bearer_context_mod()\n = cucp_cuup_bearer_context_modif_direct()
-note over rrc:e1_bearer_context_modif() [20]
-note over rrc:bearer_modif_response()\n = bearer_modif_response_direct()
-rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
-note over rrc:rrc_gNB_generate_dedicatedRRCReconfiguration() [22]
-note over rrc:nr_rrc_transfer_protected_rrc_message()
-note over rrc:nr_pdcp_data_req_srb()
-note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
-note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_direct()
-note over rrc:dl_rrc_message_transfer()
-note over rrc:rrc_gNB_process_e1_bearer_context_modif_resp() [23]
-note over rrc:rrc_gNBdecode_dcch()
-note over rrc:handle_rrcReconfigurationComplete() [24]
-note over rrc:rrc_gNB_send_NGAP_PDUSESSION_SETUP_RESP() [25,26]
-rrc-->ngap: itti_send_msg_to_task(TASK_NGAP)
-ngap-->cn: "PDU Session Resource Setup Response"
+	cn-->ngap: "PDU Session Resource Setup Request"
+	note over ngap:ngap_gNB_decode_pdu() [1]
+	note over ngap:ngap_gNB_handle_pdusession_setup_request()
+	note over ngap:"change NSSAI SD to 0xffffff if SD is NULL"
+	ngap-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_process_PDUSESSION_SETUP_REQUEST()
+	note over rrc:trigger_bearer_setup() [3]
+	note over rrc:generateDRB() [4]
+	note over rrc:get_new_cuup_for_ue() [6]
+	note over rrc:select_cuup_slice() [5]
+	note over rrc: bearer_context_setup()\n = cucp_cuup_bearer_context_setup_direct()
+	note over rrc: e1_bearer_context_setup()
+	note over rrc: drb_gtpu_create()
+	note over rrc: gtpv1u_create_ngu_tunnel()
+	note over rrc: newGtpuCreateTunnel() [7]
+	note over rrc: nr_pdcp_add_drbs()
+	note over rrc: add_drb() [8]
+	note over rrc: new_nr_sdap_entity() [9]
+	note over rrc: bearer_setup_response()\n = bearer_setup_response_direct()
+	rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_process_e1_bearer_context_setup_resp()
+	note over rrc:rrc_gNB_generate_UeContextSetupRequest()
+	note over rrc:activate_srb() [10]
+	note over rrc:ue_context_setup_request()\n = ue_context_setup_request_direct()
+	note over rrc:ue_context_setup_request()
+	note over rrc:handle_ue_context_srbs_setup()
+	note over rrc:nr_rlc_add_srb() [11]
+	note over rrc:handle_ue_context_drbs_setup()
+	note over rrc:nr_rlc_add_drb() [12]
+	note over rrc:nr_rlc_add_drb() [13]
+	note over rrc:update_cellGroupConfig()
+	note over rrc:get_config_srs() [15]
+	note over rrc:get_config_srs() [16]
+	note over rrc:ue_context_setup_response()\n = ue_context_setup_response_direct()
+	rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_CU_process_ue_context_setup_response() [21]
+	note over rrc:e1_send_bearer_updates()
+	note over rrc:bearer_context_mod()\n = cucp_cuup_bearer_context_modif_direct()
+	note over rrc:e1_bearer_context_modif() [20]
+	note over rrc:bearer_modif_response()\n = bearer_modif_response_direct()
+	rrc-->rrc: itti_send_msg_to_task(TASK_RRC_GNB)
+	note over rrc:rrc_gNB_generate_dedicatedRRCReconfiguration() [22]
+	note over rrc:nr_rrc_transfer_protected_rrc_message()
+	note over rrc:nr_pdcp_data_req_srb()
+	note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
+	note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_direct()
+	note over rrc:dl_rrc_message_transfer()
+	note over rrc:rrc_gNB_process_e1_bearer_context_modif_resp() [23]
+	note over rrc:rrc_gNBdecode_dcch()
+	note over rrc:handle_rrcReconfigurationComplete() [24]
+	note over rrc:rrc_gNB_send_NGAP_PDUSESSION_SETUP_RESP() [25,26]
+	rrc-->ngap: itti_send_msg_to_task(TASK_NGAP)
+	ngap-->cn: "PDU Session Resource Setup Response"
 
 ```
 
