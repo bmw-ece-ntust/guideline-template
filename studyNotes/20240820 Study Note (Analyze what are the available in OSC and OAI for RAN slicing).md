@@ -112,7 +112,7 @@ abc
 ### 3.2. OAI CU
 
 - branch = `develop`
-- More detailed [note](https://hackmd.io/@superwilfrid/Hyb00PTh0)
+- More detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240910%20Study%20Note%20(Define%20Current%20OAI%20CU%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md)
 
 | Category                | Description                                                                                                                                                               | Node Availability                                                         |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -122,12 +122,12 @@ abc
 #### 3.2.1. Network Slice Creation
 
 - Network slice creation is to save Supported Slice in CU from Configuration file of integrated CU or CU-UP
-- In OAI CU, network slice creation is done in `RB_INSERT(rrc_cuup_tree)`. Please see more detailed [note](https://hackmd.io/@superwilfrid/Hyb00PTh0#7-Slice-Configuration-gNBCU)
+- In OAI CU, network slice creation is done in `RB_INSERT(rrc_cuup_tree)`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240910%20Study%20Note%20(Define%20Current%20OAI%20CU%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#7-Slice-Configuration-gNBCU)
 
 #### 3.2.2. CU-UP Slice Selection for PDU Session
 
 - CU-UP Slice selection for DRB is to choose which CU-UP is this PDU Session of UE belong to. It is done in PDU Session Resource Setup procedure
-- In OAI CU, CU-UP slice selection for PDU Session is done in `select_cuup_slice()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/Hyb00PTh0#2-PDU-Session-Setup-Request-CU)
+- In OAI CU, CU-UP slice selection for PDU Session is done in `select_cuup_slice()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240910%20Study%20Note%20(Define%20Current%20OAI%20CU%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#2-PDU-Session-Setup-Request-CU)
 
 
 

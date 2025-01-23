@@ -2,23 +2,32 @@
 
 ###### tags: `2024`
 
-:::info
+
 **Goal:**
 - [x] [Define Current OAI CU Functions & Parameters for RAN Slicing](#0-Summary)
-:::
 
-:::success 
 **References:**
 - [openinterface5G Gitlab](https://gitlab.eurecom.fr/oai/openairinterface5g)
 - [OAI Feature Set](https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/develop/doc/FEATURE_SET.md)
 - [RAN Slicing Architecture Requirements](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240815%20Study%20Note%20(RAN%20Slicing%20Architecture%20Requirements).md)
 - [Analyze what are the available in OSC and OAI for RAN slicing](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240820%20Study%20Note%20(Analyze%20what%20are%20the%20available%20in%20OSC%20and%20OAI%20for%20RAN%20slicing).md)
-:::
 
-:::warning
 **Contents:**
-[toc]
-:::
+- [2024/09/10 Study Note (Define Current OAI CU Functions & Parameters for RAN Slicing)](#2024-09-10-study-note--define-current-oai-cu-functions---parameters-for-ran-slicing-)
+          + [tags: `2024`](#tags---2024-)
+  * [0. Summary](#0-summary)
+    + [0.1. OAI CU's Task](#01-oai-cu-s-task)
+  * [1. PDU Session Setup Request (gNB)](#1-pdu-session-setup-request--gnb-)
+  * [2. PDU Session Setup Request (CU)](#2-pdu-session-setup-request--cu-)
+  * [3. Initial Context Setup Request (gNB)](#3-initial-context-setup-request--gnb-)
+  * [4. Initial Context Setup Request (CU)](#4-initial-context-setup-request--cu-)
+  * [5. Initial Context Setup Response (gNB)](#5-initial-context-setup-response--gnb-)
+  * [6. Initial Context Setup Response (CU)](#6-initial-context-setup-response--cu-)
+  * [7. Slice Configuration (gNB/CU)](#7-slice-configuration--gnb-cu-)
+  * [8. Supported Slice Report to CN (CU)](#8-supported-slice-report-to-cn--cu-)
+  * [9. E2SM-KPM](#9-e2sm-kpm)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 0. Summary
 
@@ -41,9 +50,9 @@
 
 ### 0.1. OAI CU's Task
 
-:::info
+
 Dotted box only exist in CU-DU Split
-:::
+
 
 ```mermaid
 block-beta
@@ -121,7 +130,7 @@ ngap-->cn: "PDU Session Resource Setup Response"
 
 ```
 
-:::spoiler Example Log
+ Example Log
 ```shell=
 [NGAP]   PDUSESSIONSetup initiating message
 [NR_RRC]   [gNB 0] gNB_ue_ngap_id 1 
@@ -151,18 +160,18 @@ ngap-->cn: "PDU Session Resource Setup Response"
  [NR_RRC]   NGAP_PDUSESSION_SETUP_RESP: sending the message
 [NGAP]   pdusession_setup_resp_p: pdusession ID 1, gnb_addr 192.168.70.129, SIZE 4, TEID 1613370070
 ```
-:::
+
 
 
 ## 2. PDU Session Setup Request (CU)
 
-:::info
+
 - `select_cuup_slice()` will select which CU-UP is each PDU Session belong to. These are some important consideration to be made:
     - 1 PDU Session will belong only to 1 Slice
     - Each CU-UP can support single slice or multiple slice
     - Each CU can support single CU-UP or multiple CU-UP
 ![image](https://hackmd.io/_uploads/r15W8fKAA.png)
-:::
+
 
 
 ```plantuml
@@ -260,7 +269,7 @@ note over rrc:deliver_pdu_cb()\n = rrc_deliver_dl_rrc_message()
 note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_direct()
 ```
 
-:::spoiler Example Log
+ Example Log
 ```shell=
 [NGAP]   NGAP_FIND_PROTOCOLIE_BY_ID ie is NULL (searching for ie: 110)
 [NGAP]   could not find NGAP_ProtocolIE_ID_id_UEAggregateMaximumBitRate
@@ -270,7 +279,7 @@ note over rrc:dl_rrc_message_transfer()\n = dl_rrc_message_transfer_direct()
 [NR_RRC]   [gNB 0][UE 7e3d] Saved security key F33D052FE7E841831D45DE67328FF2AD6BA1B7CFBBD8CE4CD371BA024C5A5DEC
 [NR_RRC]   UE 1 Logical Channel DL-DCCH, Generate SecurityModeCommand (bytes 3)
 ```
-:::
+
 
 ## 4. Initial Context Setup Request (CU)
 
@@ -313,12 +322,12 @@ note over ngap:ngap_gNB_initial_ctxt_resp() [2]
 ngap-->cn: "Initial Context Setup response"
 ```
 
-:::spoiler Example Log
+ Example Log
 ```shell=
 [NR_RRC]   UE 1: Receive RRC Reconfiguration Complete message (xid 2)
 [NR_RRC]   Send message to sctp: NGAP_InitialContextSetupResponse
 ```
-:::
+
 
 
 ## 6. Initial Context Setup Response (CU)
@@ -348,11 +357,11 @@ ngap-->cn: "Initial Context Setup response"
 
 ## 7. Slice Configuration (gNB/CU)
 
-:::info
+
 - The save of CU's Slice configration is done in `RB_INSERT(rrc_cuup_tree)`. It can be from 2 source:
     - If CU have CP UP split, CU-UP will report to CU-CP about the slice it support in E1 Setup
     - If CU don't have CP UP split, CU will store slice configuration from CU's configuration file. It is triggered in a self initiated E1 Setup (please see below figure)
-:::
+
 
 ```plantuml
 participant "rrc_gNB_task" as rrc
@@ -368,7 +377,7 @@ note over rrc:rrc_gNB_process_e1_setup_req() [75]
 note over rrc:RB_INSERT(rrc_cuup_tree)
 ```
 
-:::spoiler Example Log
+ Example Log
 ```shell=
 [LIBCONFIG] gNBs.[0]: 30/30 parameters successfully set, (22 to default value)
 [LIBCONFIG] MACRLCs.[0]: 34/34 parameters successfully set, (28 to default value)
@@ -446,7 +455,7 @@ note over rrc:RB_INSERT(rrc_cuup_tree)
 [MAC]   CU uses RRC version 17.3.0
 [NR_RRC]   Accepting new CU-UP ID 3584 name gNB-OAI (assoc_id -1)
 ```
-:::
+
 
 ## 8. Supported Slice Report to CN (CU)
 
@@ -461,7 +470,7 @@ note over ngap:ngap_gNB_itti_send_sctp_()
 
 ## 9. E2SM-KPM
 
-:::info
+
 Based on OAI's E2 Agent [Documentation](https://gitlab.eurecom.fr/oai/openairinterface5g/-/tree/develop/openair2/E2AP?ref_type=heads#311-e2sm-kpm):
 3.1.1 E2SM-KPM
 As mentioned in section 2.1.2 Build OAI with E2 Agent, we support KPM v2.03/v3.00. Uses ASN.1 encoding.
@@ -477,7 +486,7 @@ From 3GPP TS 28.552, we support the following list:
 
 From O-RAN.WG3.E2SM-KPM-version specification, we implemented:
 - REPORT Service Style 4 ("Common condition-based, UE-level" - section 7.4.5) - fetch above measurements per each UE that matches common criteria (e.g. S-NSSAI).
-:::
+
 
 ```plantuml
 participant "thrd_agent" as e2
