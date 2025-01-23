@@ -138,7 +138,7 @@ More detail about each message can be accessed from this [note](https://github.c
 
 
 
-More detail about each message can be accessed from this [note](https://hackmd.io/@superwilfrid/H11zB5O9A)
+More detail about each message can be accessed from this [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240813%20Study%20Note%20(What%20parameters%20need%20to%20get%20from%20DU).md)
 
 
 ## 6. What function need to be available in DU
