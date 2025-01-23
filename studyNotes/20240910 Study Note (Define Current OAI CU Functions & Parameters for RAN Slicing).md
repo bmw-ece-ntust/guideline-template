@@ -344,13 +344,13 @@ sequenceDiagram
 	participant cn as "CN"
 
 	note over sctp:...
-	sctp-->f1ap
+	sctp-->f1ap: ...
 	note over rrc:cu_task_handle_sctp_data_ind()
 	note over rrc:f1ap_handle_message()
 	note over rrc:f1ap_messages_processing()\n = CU_handle_UL_RRC_MESSAGE_TRANSFER()
 	note over rrc:nr_pdcp_data_ind()
 	note over rrc:enqueue_pdcp_data_ind()
-	f1ap-->rrc
+	f1ap-->rrc: ...
 	note over rrc:rrc_gNBdecode_dcch()
 	note over rrc:handle_rrcReconfigurationComplete() [1]
 	note over rrc:rrc_gNB_send_NGAP_INITIAL_CONTEXT_SETUP_RESP()
