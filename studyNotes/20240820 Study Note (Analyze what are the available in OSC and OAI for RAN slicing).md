@@ -166,7 +166,7 @@ abc
 ### 3.4. OAI UE
 
 - branch = `develop`
-- More detailed [note](https://hackmd.io/@superwilfrid/S19uIKw0A)
+- More detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240930%20Study%20Note%20(Define%20Current%20OAI%20UE%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md)
 
 | Category                | Description                                                             | Node Availability  |
 | ----------------------- | ----------------------------------------------------------------------- | ------------------ |
@@ -177,13 +177,13 @@ abc
 
 - Network slice creation is to save slice configuration from configuration file and Allowed Slice information from CN
 - In OAI UE:
-    - Saving configuration file slice setting is done in `init_uicc()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/S19uIKw0A#1-Slice-Configuration)
-    - Saving CN allowed slice is done in `parse_allowed_nssai()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/S19uIKw0A#3-Allowed-Slice-from-CN)
+    - Saving configuration file slice setting is done in `init_uicc()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240930%20Study%20Note%20(Define%20Current%20OAI%20UE%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#1-Slice-Configuration)
+    - Saving CN allowed slice is done in `parse_allowed_nssai()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240930%20Study%20Note%20(Define%20Current%20OAI%20UE%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#3-Allowed-Slice-from-CN)
 
 #### 3.4.2. Slice Selection for PDU Session
 
 - Slice Selection for PDU Session is to create PDU session based on the slice setting and CN Allowed slice
-- In OAI UE, network slice creation is done in `generatePduSessionEstablishRequest()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/S19uIKw0A#3-Allowed-Slice-from-CN)
+- In OAI UE, network slice creation is done in `generatePduSessionEstablishRequest()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240930%20Study%20Note%20(Define%20Current%20OAI%20UE%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#3-Allowed-Slice-from-CN)
 
 ## 4. OSC DU High
 

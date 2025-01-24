@@ -23,7 +23,7 @@
     + [0.1. OAI UE's Entity](#01-oai-ue-s-entity)
   * [1. Slice Configuration](#1-slice-configuration)
   * [2. Requested Slice to CN](#2-requested-slice-to-cn)
-    + [2.1. `encode_registration_request()` function](#21--encode-registration-request----function)
+    + [2.1. `encode_registration_request()` function](#21-encode_registration_request-function)
   * [3. Allowed Slice from CN](#3-allowed-slice-from-cn)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
