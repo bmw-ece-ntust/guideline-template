@@ -187,7 +187,7 @@ abc
 
 ## 4. OSC DU High
 
-- More detailed [note](https://hackmd.io/@superwilfrid/H1YP3tb60)
+- More detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240913%20Study%20Note%20(Define%20Current%20OSC%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md)
 
 | Category                | Description                                                                                                                                                                                | Node Availability                                                            |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
@@ -197,22 +197,22 @@ abc
 ### 4.1. Network Slice Creation
 
 - Network slice creation is to save Supported Slice in DU from Configuration file or O1 interface
-- In OSC DU High, network slice creation is done in `setCellParam()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/H1YP3tb60#31-Before-F1-Setup)
+- In OSC DU High, network slice creation is done in `setCellParam()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240913%20Study%20Note%20(Define%20Current%20OSC%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#31-Before-F1-Setup)
 
 ### 4.2. Network Slice Modification
 
 - Network slice modification is to modify Supported Slice RRM Policy in DU from Configuration file or O1 interface
-- In OSC DU High, network slice modification is done in `setRrmPolicy()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/H1YP3tb60#32-After-F1-Setup)
+- In OSC DU High, network slice modification is done in `setRrmPolicy()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240913%20Study%20Note%20(Define%20Current%20OSC%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#32-After-F1-Setup)
 
 ### 4.3. Slice Selection for DRB
 
 - Slice selection for DRB is to choose which slice is this DRB of UE belong to. It is done in UE Context Setup procedure
-- In OSC DU High, slice selection for DRB is done in `updateDedLcInfo()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/H1YP3tb60#1-UE-Context-Setup-Request)
+- In OSC DU High, slice selection for DRB is done in `updateDedLcInfo()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240913%20Study%20Note%20(Define%20Current%20OSC%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#1-UE-Context-Setup-Request)
 
 ### 4.4. Slice Aware Scheduling
 
 - Slice Aware scheduling for DRB is to allocate resource to DRB based on the slice this DRB of UE belong to. It is done in PRB Allocation
-- In OSC DU High, Slice Aware Scheduling for DRB is done in `prbAllocUsingRRMPolicy()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/H1YP3tb60#5-Slice-RRM-Policy-Based-PRB-Allocation)
+- In OSC DU High, Slice Aware Scheduling for DRB is done in `prbAllocUsingRRMPolicy()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240913%20Study%20Note%20(Define%20Current%20OSC%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#5-Slice-RRM-Policy-Based-PRB-Allocation)
 
 
 ## 5. free5GC

@@ -1211,7 +1211,7 @@ sequenceDiagram
 	sch-->mac: MacMessageRouter()
 	note over mac:MacProcSchCellCfgCfm()
 	note over mac:MacSendCellCfgCfm()
-	mac-->duApp:
+	mac-->duApp:...
 	note over duApp:duHandleMacCellCfgCfm()
 	note over duApp:BuildAndSendDUConfigUpdate()
 	note over duApp:duBuildAndSendMacCellStart()
