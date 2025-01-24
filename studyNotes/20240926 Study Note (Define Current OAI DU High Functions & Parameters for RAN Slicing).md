@@ -70,7 +70,7 @@ columns 1
 MAC Scheduler save a UE's DRB Slice information inside `sched_ctrl->lc_config->nssai` data structure through the `nr_mac_add_lcid()` function 
 
 
-```mermaind
+```mermaid
 sequenceDiagram
 	participant f1ap as "F1AP_DU_task"
 	participant cu as "CU"

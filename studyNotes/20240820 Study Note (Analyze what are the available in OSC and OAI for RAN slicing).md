@@ -134,7 +134,7 @@ abc
 ### 3.3. OAI DU
 
 - branch = `develop`
-- More detailed [note](https://hackmd.io/@superwilfrid/SyPkdrGRC)
+- More detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240926%20Study%20Note%20(Define%20Current%20OAI%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md)
 
 | Category                | Description                                                                                                                                               | Node Availability                                                         |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -144,7 +144,7 @@ abc
 #### 3.3.1. Network Slice Creation
 
 - Network slice creation is to save Supported Slice in DU from Configuration file
-- In OAI DU, network slice creation is done in `read_du_cell_info()`. Please see more detailed [note](https://hackmd.io/@superwilfrid/SyPkdrGRC#2-Slice-Configuration)
+- In OAI DU, network slice creation is done in `read_du_cell_info()`. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240926%20Study%20Note%20(Define%20Current%20OAI%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#2-Slice-Configuration)
 
 #### 3.3.2. Network Slice Modification
 
@@ -154,12 +154,12 @@ abc
 #### 3.3.3. Slice Selection for DRB
 
 - Slice selection for DRB is to choose which slice is this DRB of UE belong to. It is done in UE Context Setup procedure
-- In OAI DU High, slice selection for DRB is not supported yet. Please see more detailed [note](https://hackmd.io/@superwilfrid/SyPkdrGRC#0-Summary)
+- In OAI DU High, slice selection for DRB is not supported yet. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240926%20Study%20Note%20(Define%20Current%20OAI%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#0-Summary)
 
 #### 3.3.4. Slice Aware Scheduling
 
 - Slice Aware scheduling for DRB is to allocate resource to DRB based on the slice this DRB of UE belong to. It is done in PRB Allocation
-- In OAI DU High, Slice Aware Scheduling for DRB is not supported yet. Please see more detailed [note](https://hackmd.io/@superwilfrid/SyPkdrGRC#0-Summary)
+- In OAI DU High, Slice Aware Scheduling for DRB is not supported yet. Please see more detailed [note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240926%20Study%20Note%20(Define%20Current%20OAI%20DU%20High%20Functions%20%26%20Parameters%20for%20RAN%20Slicing).md#0-Summary)
 
 
 
