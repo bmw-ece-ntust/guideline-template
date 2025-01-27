@@ -2,19 +2,14 @@
 
 ###### tags: `2024`
 
-:::info
+
 **Goal:**
 - [x] [Check if OSC Scheduler Do Scheduling (Calculation) and PRB Allocation Combined or Separately](#0-Summary)
-
-:::
-
-:::success 
+ 
 **References:**
 - [2024/04/30 Study Note (OSC O-DU High I-release FCFS Multi UE scheduler Starvation Example Use Case)](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240430%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20Multi%20UE%20scheduler%20Starvation%20Example%20Use%20Case).md)
 - [5G FAPI: PHY API Specification](https://www.smallcellforum.org/reports/5g-fapi-phy-api-specification/#:~:text=PHY%20FAPI%20is%20the%20main,MAC%20and%20higher%20layer%20protocols.)
-:::
 
-:::warning
 **Outline:**
 - [2024/05/07 Study Note (Check if OSC Scheduler Do Scheduling (Calculation) and PRB Allocation Combined or Separately)](#2024-05-07-study-note--check-if-osc-scheduler-do-scheduling--calculation--and-prb-allocation-combined-or-separately-)
           + [tags: `2024`](#tags---2024-)
@@ -28,7 +23,6 @@
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-:::
 
 ## 0. Summary
 
@@ -39,11 +33,12 @@
     - `SchFcfsScheduleDlLc()` do Scheduling/Calculation
     - `schDlRsrcAllocDlMsg()` do the Allocation
 
-```flow
-op1=>operation: SchFcfsScheduleDlLc() (Scheduling/Calculation)
-op2=>operation: schDlRsrcAllocDlMsg() (Allocation)
+```mermaid
+flowchart TD
+	op1["SchFcfsScheduleDlLc() (Scheduling/Calculation)"]
+	op2["schDlRsrcAllocDlMsg() (Allocation)"]
 
-op1->op2
+	op1-->op2
 ```
 
 3. How does the Scheduling (Calculation) and PRB Allocation work?
