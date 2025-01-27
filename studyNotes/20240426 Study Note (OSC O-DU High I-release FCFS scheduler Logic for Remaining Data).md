@@ -17,12 +17,12 @@
   * [0. Summary](#0-summary)
   * [1. Objective of this Note](#1-objective-of-this-note)
   * [2. Prediction](#2-prediction)
-  * [3. Analysis Steps for UE Deletion from `ueToBeScheduled`](#3-analysis-steps-for-ue-deletion-from--uetobescheduled-)
-    + [3.1. When does a UE gets deleted from or reordered in `ueToBeScheduled` list?](#31-when-does-a-ue-gets-deleted-from-or-reordered-in--uetobescheduled--list-)
-    + [3.2. When will `isDlMsgScheduled` be TRUE?](#32-when-will--isdlmsgscheduled--be-true-)
-    + [3.3. When will `accumalatedSize` == 0?](#33-when-will--accumalatedsize-----0-)
+  * [3. Analysis Steps for UE Deletion from `ueToBeScheduled`](#3-analysis-steps-for-ue-deletion-from-uetobescheduled)
+    + [3.1. When does a UE gets deleted from or reordered in `ueToBeScheduled` list?](#31-when-does-a-ue-gets-deleted-from-or-reordered-in-uetobescheduled-list)
+    + [3.2. When will `isDlMsgScheduled` be TRUE?](#32-when-will-isdlmsgscheduled-be-true)
+    + [3.3. When will `accumalatedSize` == 0?](#33-when-will-accumalatedsize--0-)
     + [3.4. Conclusion](#34-conclusion)
-  * [4. Extra Code Trace: Where does UE get added into `ueToBeScheduled`?](#4-extra-code-trace--where-does-ue-get-added-into--uetobescheduled--)
+  * [4. Extra Code Trace: Where does UE get added into `ueToBeScheduled`?](#4-extra-code-trace--where-does-ue-get-added-into-uetobescheduled-)
   * [5. Example RUN](#5-example-run)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
