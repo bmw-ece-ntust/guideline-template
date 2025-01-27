@@ -1576,7 +1576,7 @@ INFO   -->  DU_APP : F1 Setup Response received
     - maximum Ratio
 - Slice Aware Scheduling for DRB/LC is done in `prbAllocUsingRRMPolicy()` which will allocate PRB to each DRB according to the rule of the slice this DRB belong to. This function in OSC still limited:
 
-    - OSC DU High only support dedicated Ratio (which translates to dedicated PRB) allocation. To learn why is this, see [this note](https://hackmd.io/@superwilfrid/H1dOxu5lA#07-Conclusion)
+    - OSC DU High only support dedicated Ratio (which translates to dedicated PRB) allocation. To learn why is this, see [this note](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240415%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20scheduler%20with%20RRM%20Policy%20Implementation).md#07-Conclusion)
 
 
 ```mermaid
