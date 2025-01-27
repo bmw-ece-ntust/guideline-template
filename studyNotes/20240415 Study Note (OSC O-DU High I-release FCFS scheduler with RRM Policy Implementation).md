@@ -6,7 +6,7 @@
 **Goal:**
 - [x] [Explain the root cause of weird "OSC RRMPolicy" implementation](#07-Conclusion)
 - [x] [Check the validity of the example use case](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240430%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20Multi%20UE%20scheduler%20Starvation%20Example%20Use%20Case).md)
-- [x] [Check OSC's FCFS logic (what happens if UE1 have remaining data that was unallocated in first TTI)](https://hackmd.io/@superwilfrid/BJsPv3Ob0)
+- [x] [Check OSC's FCFS logic (what happens if UE1 have remaining data that was unallocated in first TTI)](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240426%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20scheduler%20Logic%20for%20Remaining%20Data).md)
 
  
 **References:**
@@ -48,13 +48,13 @@
     + [3.11. `sch_fcfs.h`](#311-sch_fcfsh)
   * [4. OSC's Logical Channel Initialization using RRM Policy](#4-oscs-logical-channel-initialization-using-rrm-policy)
     + [4.1. Flow](#41-flow)
-    + [4.2. `updateDedLcInfo`](#42--updatededlcinfo-)
-    + [4.3. `cpyRrmPolicyInDuCfgParams`](#43--cpyrrmpolicyinducfgparams-)
-    + [4.4. `fillSliceCfgInfo`](#44--fillslicecfginfo-)
-    + [4.5. `addSliceCfgInSchDb`](#45--addslicecfginschdb-)
-    + [4.6. `parseRrmPolicyRatio`](#46--parserrmpolicyratio-)
-    + [4.7. `fillSchUlLcCtxt`](#47--fillschullcctxt-)
-    + [4.8. `fillSchDlLcCtxt`](#48--fillschdllcctxt-)
+    + [4.2. `updateDedLcInfo`](#42-updatededlcinfo)
+    + [4.3. `cpyRrmPolicyInDuCfgParams`](#43-cpyrrmpolicyinducfgparams)
+    + [4.4. `fillSliceCfgInfo`](#44-fillslicecfginfo)
+    + [4.5. `addSliceCfgInSchDb`](#45-addslicecfginschdb)
+    + [4.6. `parseRrmPolicyRatio`](#46-parserrmpolicyratio)
+    + [4.7. `fillSchUlLcCtxt`](#47-fillschullcctxt)
+    + [4.8. `fillSchDlLcCtxt`](#48-fillschdllcctxt)
   * [5. OSC's Logical Channel Scheduling / Resource Allocation](#5-oscs-logical-channel-scheduling--resource-allocation)
     + [5.1. `prbAllocUsingRRMPolicy`](#51-prballocusingrrmpolicy)
     + [5.2. `schFcfsScheduleDlLc`](#52-schfcfsscheduledllc)

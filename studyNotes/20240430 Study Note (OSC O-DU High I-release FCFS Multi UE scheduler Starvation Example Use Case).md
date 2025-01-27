@@ -9,7 +9,7 @@
  
 **References:**
 - [2024/04/15 Study Note (OSC O-DU High I-release FCFS scheduler with RRM Policy Implementation)](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240415%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20scheduler%20with%20RRM%20Policy%20Implementation).md)
-- [2024/04/26 Study Note (OSC O-DU High I-release FCFS scheduler Logic for Remaining Data)](https://hackmd.io/@superwilfrid/BJsPv3Ob0)
+- [2024/04/26 Study Note (OSC O-DU High I-release FCFS scheduler Logic for Remaining Data)](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240426%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20scheduler%20Logic%20for%20Remaining%20Data).md)
 - [Johnson's Note | Multi-UE test record](https://hackmd.io/@Johnson-72/rJuyEztCT)
 
 
