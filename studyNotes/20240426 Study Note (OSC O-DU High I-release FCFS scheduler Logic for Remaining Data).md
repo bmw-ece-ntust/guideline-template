@@ -8,7 +8,7 @@
 
 
 **References:**
-- [2024/04/15 Study Note (OSC O-DU High I-release FCFS scheduler with RRM Policy Implementation)](https://hackmd.io/@superwilfrid/H1dOxu5lA)
+- [2024/04/15 Study Note (OSC O-DU High I-release FCFS scheduler with RRM Policy Implementation)](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240415%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20scheduler%20with%20RRM%20Policy%20Implementation).md)
 
 
 **Outline:**
