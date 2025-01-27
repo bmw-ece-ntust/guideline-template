@@ -69,7 +69,7 @@
 
 - Based on Wilfrid's and Bimo's discussion on [2024/04/09](https://hackmd.io/@superwilfrid/rk9If1F56#20240409) about Multi UE Scheduling for 1 Slice, there are some analysis that are needed for OSC's FCFS Multi UE scheduling:
     1. Explain the root cause of weird "OSC RRMPolicy" implementation
-    2. Check the validity of the example [use case](https://hackmd.io/@superwilfrid/r1TKoOP10#03-Compare)
+    2. Check the validity of the example [use case](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240401%20Study%20Note%20(OSC%20O-DU%20High%20I%20Multi%20UE%20Scheduling%20for%201%20Slice).md#03-Compare)
     3. Check OSC's FCFS logic (what happens if UE1 have remaining data that was unallocated in first TTI)
 
 - This note is made to answer the 2nd question.
@@ -105,7 +105,7 @@
 
 ## 3. OSC I-release Experiment Setup
 
-- To prove that the example [use case](https://hackmd.io/@superwilfrid/r1TKoOP10#03-Compare) of starvation is valid, experiment is done by running OSC O-DU. The test is done by Johnson and the test steps can be seen in this [note](https://hackmd.io/@Johnson-72/rJuyEztCT)
+- To prove that the example [use case](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240401%20Study%20Note%20(OSC%20O-DU%20High%20I%20Multi%20UE%20Scheduling%20for%201%20Slice).md#03-Compare) of starvation is valid, experiment is done by running OSC O-DU. The test is done by Johnson and the test steps can be seen in this [note](https://hackmd.io/@Johnson-72/rJuyEztCT)
 
 - Important modifications to note on the experiment:
     - RRM Policy, number of LC, etc used on the experiment are mostly default configuration.
