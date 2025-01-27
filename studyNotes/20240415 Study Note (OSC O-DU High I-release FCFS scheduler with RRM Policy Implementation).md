@@ -5,7 +5,7 @@
 
 **Goal:**
 - [x] [Explain the root cause of weird "OSC RRMPolicy" implementation](#07-Conclusion)
-- [x] [Check the validity of the example use case](https://hackmd.io/@superwilfrid/BkDXffCb0)
+- [x] [Check the validity of the example use case](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240430%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20Multi%20UE%20scheduler%20Starvation%20Example%20Use%20Case).md)
 - [x] [Check OSC's FCFS logic (what happens if UE1 have remaining data that was unallocated in first TTI)](https://hackmd.io/@superwilfrid/BJsPv3Ob0)
 
  
