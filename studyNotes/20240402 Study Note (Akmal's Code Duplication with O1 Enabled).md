@@ -12,7 +12,7 @@
  
 **References:**
 - [Akmal Handover | Thesis Repository User Guide](https://hackmd.io/@akmalns/BJKrRdqua#A-Installation)
-- [Akmal's Code Duplication](https://hackmd.io/@superwilfrid/BJh5jf4n6)
+- [Akmal's Code Duplication](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/Akmal's%20Code%20Duplication.md)
 - [Send Metrics to SMO using VES Event and Display It in Grafana](https://hackmd.io/@akmalns/rJkBGdtkp)
 - [Docs-for-BMW-Lab.md](https://github.com/bmw-ece-ntust/MIMO-Scheduler-on-Sch-Slice-Based/blob/o1-perf-metrics/Docs-for-BMW-Lab.md)
 - [Tori | Integration & Testing [G] O-DU and [I] SMO](https://hackmd.io/@Min-xiang/H165aN2o6)
@@ -26,11 +26,11 @@
   * [1. Meeting with Akmal 2024/03/15](#1-meeting-with-akmal-2024-03-15)
   * [2. O-DU Installation and Running Steps](#2-o-du-installation-and-running-steps)
   * [3. Connect to SMO Steps](#3-connect-to-smo-steps)
-  * [4. O-DU Performance Metrics stored in SMO's InfluxDB](#4-o-du-performance-metrics-stored-in-smo-s-influxdb)
+  * [4. O-DU Performance Metrics stored in SMO's InfluxDB](#4-o-du-performance-metrics-stored-in-smos-influxdb)
   * [5. Display PM from InfluxDB to Grafana](#5-display-pm-from-influxdb-to-grafana)
   * [6. Problems](#6-problems)
     + [6.1. pnf registration error](#61-pnf-registration-error)
-    + [6.2. EGTP : Failed to bind socket](#62-egtp---failed-to-bind-socket)
+    + [6.2. EGTP : Failed to bind socket](#62-egtp-failed-to-bind-socket)
     + [6.3. DMAAP does not receive VES EVENT from O-DU](#63-dmaap-does-not-receive-ves-event-from-o-du)
     + [6.4. InfluxDB port didn't open](#64-influxdb-port-didn-t-open)
 
