@@ -30,7 +30,7 @@
   * [5. Display PM from InfluxDB to Grafana](#5-display-pm-from-influxdb-to-grafana)
   * [6. Problems](#6-problems)
     + [6.1. pnf registration error](#61-pnf-registration-error)
-    + [6.2. EGTP : Failed to bind socket](#62--egtp-failed-to-bind-socket)
+    + [6.2. EGTP : Failed to bind socket](#62-egtp--failed-to-bind-socket)
     + [6.3. DMAAP does not receive VES EVENT from O-DU](#63-dmaap-does-not-receive-ves-event-from-o-du)
     + [6.4. InfluxDB port didn't open](#64-influxdb-port-didn-t-open)
 

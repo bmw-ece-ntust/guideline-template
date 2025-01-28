@@ -12,7 +12,7 @@
 - [Development of Multiple UE Scheduling per TTI on OSC DU](https://hackmd.io/@JoJoWei/rkCkRi_Bh#Development-of-Multiple-UE-Scheduling-per-TTI-on-OSC-DU)
 - [Dennis' Slice Enabled Scheduler Source Code](https://github.com/bmw-ece-ntust/o-du-l2/blob/slice_enabled_scheduler/src/5gnrsch/sch_slice_based.c)
 - [Jojo's Multi UE per TTI Source Code](https://github.com/bmw-ece-ntust/o-du-l2/blob/multi_ue_per_tti/src/5gnrsch/sch_slice_based.c)
-- [2024/03/22 Study Note (OSC O-DU High I-release Multi UE Explanation)](https://hackmd.io/@superwilfrid/r1zl8jqAT)
+- [2024/03/22 Study Note (OSC O-DU High I-release Multi UE Explanation)](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240322%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20Multi%20UE%20Explanation).md)
 - [2024/04/15 Study Note (OSC O-DU High I-release FCFS scheduler with RRM Policy Implementation)](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240415%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20FCFS%20scheduler%20with%20RRM%20Policy%20Implementation).md)
 
 
@@ -33,14 +33,14 @@
     + [3.3. `MacUlSlot`](#33-maculslot)
     + [3.4. `UlSchedInfo`](#34-ulschedinfo)
     + [3.5. Conclusion](#35-conclusion)
-  * [4. Dennis' Slice Enabled Scheduler Algorithm](#4-dennis--slice-enabled-scheduler-algorithm)
-    + [4.1. Additional Data Structure in Dennis' Work](#41-additional-data-structure-in-dennis--work)
+  * [4. Dennis' Slice Enabled Scheduler Algorithm](#4-dennis-slice-enabled-scheduler-algorithm)
+    + [4.1. Additional Data Structure in Dennis' Work](#41-additional-data-structure-in-dennis-work)
     + [4.2. Single UE per TTI Slice Enabled Scheduler Algorithm](#42-single-ue-per-tti-slice-enabled-scheduler-algorithm)
-  * [5. Jojo's Multi UE per TTI Algorithm](#5-jojo-s-multi-ue-per-tti-algorithm)
-    + [5.1. Additional Data Structure in Jojo's Work](#51-additional-data-structure-in-jojo-s-work)
+  * [5. Jojo's Multi UE per TTI Algorithm](#5-jojos-multi-ue-per-tti-algorithm)
+    + [5.1. Additional Data Structure in Jojo's Work](#51-additional-data-structure-in-jojos-work)
     + [5.2. Multi UE per TTI Slice Enabled Scheduler Algorithm](#52-multi-ue-per-tti-slice-enabled-scheduler-algorithm)
-          + [3. Step 3: In RR case, divide number of PRB of Slice equally to each UE](#3-step-3--in-rr-case--divide-number-of-prb-of-slice-equally-to-each-ue)
-          + [7. Step 7: If there is PRB left for 1 Slice, then allocate PRB to UE by ueToBeScheduled sequence](#7-step-7--if-there-is-prb-left-for-1-slice--then-allocate-prb-to-ue-by-uetobescheduled-sequence)
+          + [3. Step 3: In RR case, divide number of PRB of Slice equally to each UE](#3-step-3-in-rr-case--divide-number-of-prb-of-slice-equally-to-each-ue)
+          + [7. Step 7: If there is PRB left for 1 Slice, then allocate PRB to UE by ueToBeScheduled sequence](#7-step-7-if-there-is-prb-left-for-1-slice--then-allocate-prb-to-ue-by-uetobescheduled-sequence)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
