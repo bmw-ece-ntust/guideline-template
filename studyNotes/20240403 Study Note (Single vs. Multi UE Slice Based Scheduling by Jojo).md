@@ -39,8 +39,8 @@
   * [5. Jojo's Multi UE per TTI Algorithm](#5-jojos-multi-ue-per-tti-algorithm)
     + [5.1. Additional Data Structure in Jojo's Work](#51-additional-data-structure-in-jojos-work)
     + [5.2. Multi UE per TTI Slice Enabled Scheduler Algorithm](#52-multi-ue-per-tti-slice-enabled-scheduler-algorithm)
-          + [3. Step 3: In RR case, divide number of PRB of Slice equally to each UE](#3-step-3-in-rr-case--divide-number-of-prb-of-slice-equally-to-each-ue)
-          + [7. Step 7: If there is PRB left for 1 Slice, then allocate PRB to UE by ueToBeScheduled sequence](#7-step-7-if-there-is-prb-left-for-1-slice--then-allocate-prb-to-ue-by-uetobescheduled-sequence)
+          + [3. Step 3: In RR case, divide number of PRB of Slice equally to each UE](#3-step-3-in-rr-case-divide-number-of-prb-of-slice-equally-to-each-ue)
+          + [7. Step 7: If there is PRB left for 1 Slice, then allocate PRB to UE by ueToBeScheduled sequence](#7-step-7-if-there-is-prb-left-for-1-slice-then-allocate-prb-to-ue-by-uetobescheduled-sequence)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 

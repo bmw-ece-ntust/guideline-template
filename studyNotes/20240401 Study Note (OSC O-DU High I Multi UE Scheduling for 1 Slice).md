@@ -7,7 +7,7 @@
 - [x] [Compare ODU OSC I-rel (fcfs) and Jojo’s (slice based) scheduler for Multi UE per TTI) for 1 Slice scheduling](#03-Compare)
 
 **References:**
-- [2024/03/22 Study Note (OSC O-DU High I-release Multi UE Explanation)](https://hackmd.io/@superwilfrid/r1zl8jqAT)
+- [2024/03/22 Study Note (OSC O-DU High I-release Multi UE Explanation)](https://github.com/bmw-ece-ntust/guideline-template/blob/wilfridAzariah/studyNotes/20240322%20Study%20Note%20(OSC%20O-DU%20High%20I-release%20Multi%20UE%20Explanation).md)
 
 **Table of Contents:**
 - [2024/04/01 Study Note (OSC O-DU High I Multi UE Scheduling for 1 Slice)](#2024-04-01-study-note--osc-o-du-high-i-multi-ue-scheduling-for-1-slice-)
